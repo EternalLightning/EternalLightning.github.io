@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>EternalLightning&#39;s Blog!⚡</title>
+  <title>永恒闪电⚡的博客</title>
   
-  <subtitle>源地址 https://github.com/fomalhaut1998/hexo-theme-Fomalhaut</subtitle>
+  <subtitle>EternalLightning&#39;s Blog!⚡</subtitle>
   <link href="https://eternallightning.github.io/atom.xml" rel="self"/>
   
   <link href="https://eternallightning.github.io/"/>
@@ -10,7 +10,7 @@
   <id>https://eternallightning.github.io/</id>
   
   <author>
-    <name>EternalLightning</name>
+    <name>永恒闪电</name>
     
   </author>
   
