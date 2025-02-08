@@ -8786,10 +8786,10 @@ li.categoryBar-list-item {
 } */
 
 .neko {
-    width: 64px;
-    height: 64px;
+    width: 200px;
+    height: 200px;
     position: absolute;
-    right: 56px !important;
+    right: 89px !important;
     background-repeat: no-repeat;
     background-size: contain;
     transform: translateX(50%);
@@ -8811,7 +8811,7 @@ li.categoryBar-list-item {
     right: 50%;
     text-align: center;
     line-height: 106px;
-    top: -115%;
+    top: -20%;
 }
 
 .neko.showMsg::after {

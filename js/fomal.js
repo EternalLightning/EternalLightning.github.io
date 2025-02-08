@@ -303,7 +303,7 @@ document.addEventListener('pjax:complete', showWelcome);
 
 //----------------------------------------------------------------
 
-/* 微博热搜 start */
+/* 微博热搜 start
 document.addEventListener('pjax:complete', getWeibo);
 document.addEventListener('DOMContentLoaded', getWeibo);
 
@@ -334,7 +334,7 @@ function getWeibo() {
     });
 }
 
-/* 微博热搜 end */
+微博热搜 end */
 
 //----------------------------------------------------------------
 
@@ -688,11 +688,12 @@ if (document.body.clientWidth > 992) {
                 top: '0',
                 scroWidth: 6 + 'px',
                 z_index: 9999,
-                zoom: 0.9,
+                zoom: 0.8,
                 borderRadius: 5 + 'px',
                 right: 55.6 + 'px',
-                nekoImg: "https://bu.dusays.com/2022/07/20/62d812db74be9.png",
-                hoverMsg: "春天啦~",
+                nekoImg: "../assets/nanami.png",
+                scImg:"../assets/rope.png",
+                hoverMsg: "救救我~",
                 color: "var(--theme-color)",
                 during: 500,
                 blog_body: "body",
@@ -715,7 +716,7 @@ if (document.body.clientWidth > 992) {
                     "border-radius": setting.borderRadius,
                     'right': setting.right,
                     'background-image': 'url(' + setting.scImg + ')',
-                    'background-image': '-webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent)',
+                    // 'background-image': '-webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent)',
                     'border-radius': '2em',
                     'background-size': 'contain'
                 });
@@ -743,7 +744,7 @@ if (document.body.clientWidth > 992) {
                             "border-radius": setting.borderRadius,
                             'right': setting.right,
                             'background-image': 'url(' + setting.scImg + ')',
-                            'background-image': '-webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent)',
+                            // 'background-image': '-webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent)',
                             'border-radius': '2em',
                             'background-size': 'contain'
                         });
@@ -784,12 +785,12 @@ if (document.body.clientWidth > 992) {
                 zoom: 0.9
             }
         );
-        //自定义（去掉以下注释，并注释掉其他的查看效果）
+        //自定义（去掉以下注释，并注释掉其他的查看效果
         /*
         $("#myscoll").nekoScroll({
             nekoname:'neko1', //nekoname，相当于id
-            nekoImg:'img/猫咪.png', //neko的背景图片
-            scImg:"img/绳1.png", //绳子的背景图片
+            nekoImg:'../assets/nanami.png', //neko的背景图片
+            scImg:"../assets/rope.png", //绳子的背景图片
             bgcolor:'#1e90ff', //背景颜色，没有绳子背景图片时有效
             zoom:0.9, //绳子长度的缩放值
             hoverMsg:'你好~喵', //鼠标浮动到neko上方的对话框信息
@@ -1134,14 +1135,14 @@ function changeMouseMode() {
 var now1 = new Date();
 
 function createtime1() {
-    var grt = new Date("08/09/2022 00:00:00"); //此处修改你的建站时间或者网站上线时间
+    var grt = new Date("02/01/2025 00:00:00"); //此处修改你的建站时间或者网站上线时间
     now1.setTime(now1.getTime() + 250);
     var days = (now1 - grt) / 1000 / 60 / 60 / 24;
     var dnum = Math.floor(days);
 
     var ascll = [
-        `欢迎来到Fomalhaut🥝の小家!`,
-        `Future is now 🍭🍭🍭`,
+        `欢迎来到永恒闪电的小屋!`,
+        `大千世界，万物永恒。`,
         `
         
 ███████  ██████  ███    ███  █████  ██      ██   ██  █████  ██    ██ ████████ 
@@ -1154,7 +1155,7 @@ function createtime1() {
         "小站已经苟活",
         dnum,
         "天啦!",
-        "©2022 By Fomalhaut",
+        "©2025 By EternalLightning",
     ];
 
     setTimeout(
@@ -1193,7 +1194,7 @@ function createtime2() {
     setTimeout(
         console.warn.bind(
             console,
-            "%c ⚡ Powered by Fomalhaut🥝 %c 你正在访问Fomalhaut🥝の小家",
+            "%c ⚡ Powered by EternalLightning %c 你正在访问永恒闪电的小屋",
             "color:white; background-color:#f0ad4e",
             ""
         )
@@ -1308,8 +1309,8 @@ function share_() {
     try {
         // 截取标题
         var title = document.title;
-        var subTitle = title.endsWith("| Fomalhaut🥝") ? title.substring(0, title.length - 14) : title;
-        navigator.clipboard.writeText('Fomalhaut🥝的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n欢迎来访！🍭🍭🍭');
+        var subTitle = title.endsWith("| EternalLightning") ? title.substring(0, title.length - 14) : title;
+        navigator.clipboard.writeText('永恒闪电的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n欢迎来访！🍭🍭🍭');
         new Vue({
             data: function () {
                 this.$notify({
@@ -2495,12 +2496,6 @@ if (m == 10 && dd <= 3) {//国庆节
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
-if (m == 8 && dd == 15) {//搞来玩的，小日子投降
-    if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("小日子已经投降" + (y - 1945).toString() + "年了😃");
-        sessionStorage.setItem("isPopupWindow", "1");
-    }
-}
 if (m == 1 && dd == 1) {//元旦节
     if (sessionStorage.getItem("isPopupWindow") != "1") {
         Swal.fire(y.toString() + "年元旦快乐！🎉");
@@ -2509,7 +2504,7 @@ if (m == 1 && dd == 1) {//元旦节
 }
 if (m == 3 && dd == 8) {//妇女节
     if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("各位女神们，妇女节快乐！👩");
+        Swal.fire("各位女同志们，妇女节快乐！👩");
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
@@ -2532,18 +2527,6 @@ if (m == 5 && dd == 4) {//青年节
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
-if (m == 5 && dd == 20) {//520
-    if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("今年是520情人节\n快和你喜欢的人一起过吧！💑");
-        sessionStorage.setItem("isPopupWindow", "1");
-    }
-}
-if (m == 7 && dd == 1) {//建党节
-    if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("祝中国共产党" + (y - 1921).toString() + "岁生日快乐！");
-        sessionStorage.setItem("isPopupWindow", "1");
-    }
-}
 if (m == 9 && dd == 10) {//教师节
     if (sessionStorage.getItem("isPopupWindow") != "1") {
         Swal.fire("各位老师们教师节快乐！👩‍🏫");
@@ -2556,15 +2539,15 @@ if (m == 12 && dd == 25) {//圣诞节
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
-if (m == 8 && dd == 11) {//站长生日
+if (m == 8 && dd == 29) {//站长生日
     if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("祝站长" + (y - 1998).toString() + "岁生日快乐！🥝");
+        Swal.fire("祝站长" + (y - 2003).toString() + "岁生日快乐！");
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
-if (m == 6 && dd == 30) {//小猫咪生日
+if (m == 8 && dd == 28) {//亚托莉生日
     if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("祝小猫咪" + (y - 1999).toString() + "岁生日快乐！🐱");
+        Swal.fire("祝亚托莉生日快乐！");
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
@@ -2832,7 +2815,7 @@ function createtime() {
     var dis = Math.trunc(23400000000 + ((now - start) / 1000) * 17); // 距离=秒数*速度 记住转换毫秒
     var unit = (dis / 149600000).toFixed(6);  // 天文单位
     // 网站诞生时间
-    var grt = new Date("08/09/2022 00:00:00");
+    var grt = new Date("02/01/2025 00:00:00");
     var days = (now - grt) / 1e3 / 60 / 60 / 24,
         dnum = Math.floor(days),
         hours = (now - grt) / 1e3 / 60 / 60 - 24 * dnum,
