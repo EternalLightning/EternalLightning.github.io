@@ -6503,7 +6503,7 @@ blockquote.pullquote.right {
 /* root伪类指定全局颜色 */
 :root {
     --blue-custom: #5ea6e5;
-    --loading-color: rgba(207, 246, 247, 0.92);
+    --loading-color: rgba(207, 228, 247, 0.92);
     --border-color: #c9c9c9;
     --color-red: rgb(241, 71, 71);
     --color-orange: rgb(241, 162, 71);
@@ -6517,6 +6517,7 @@ blockquote.pullquote.right {
     --color-black: rgb(0, 0, 0);
     --color-darkblue: rgb(97, 100, 159);
     --color-heoblue: rgb(66, 90, 239);
+    --theme-color: #87CEFA;
     --btn-bg: var(--theme-color) !important;
     --scrollbar-color: var(--theme-color) !important;
     --border-style: 1px solid rgba(169, 169, 169, 0.7);
