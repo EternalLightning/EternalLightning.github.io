@@ -691,8 +691,8 @@ if (document.body.clientWidth > 992) {
                 zoom: 0.8,
                 borderRadius: 5 + 'px',
                 right: 55.6 + 'px',
-                nekoImg: "../assets/nanami.png",
-                scImg:"../assets/rope.png",
+                nekoImg: "/assets/nanami.png",
+                scImg:"/assets/rope.png",
                 hoverMsg: "救救我~",
                 color: "var(--theme-color)",
                 during: 500,
@@ -2686,7 +2686,7 @@ class Cursor {
         var colorVal = map.get(localStorage.getItem("themeColor"));
         document.body.appendChild((this.scr = document.createElement("style")));
         // this.scr.innerHTML = `* {cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' width='8px' height='8px'><circle cx='4' cy='4' r='4' opacity='1.0' fill='` + colorVal + `'/></svg>") 4 4, auto}`;
-        this.scr.innerHTML = `* {cursor: url("../assets/c1.cur") 4 4, auto}`;
+        this.scr.innerHTML = `* {cursor: url("/assets/c1.cur") 4 4, auto}`;
     }
 
     refresh() {
@@ -2832,8 +2832,8 @@ function createtime() {
     let currentTimeHtml = "";
     (currentTimeHtml =
         hnum < 18 && hnum >= 9
-            ? `<img class='boardsign' src='../assets/atri_pillow.png' title='美好都会实现的！'><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀</div>`
-            : `<img class='boardsign' src='../assets/atri_question.png' title='愿你有美好的一天~'><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀</div>`),
+            ? `<img class='boardsign' src='/assets/atri_pillow.png' title='美好都会实现的！'><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀</div>`
+            : `<img class='boardsign' src='/assets/atri_question.png' title='愿你有美好的一天~'><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀</div>`),
     document.getElementById("workboard") &&
     (document.getElementById("workboard").innerHTML = currentTimeHtml);
 }
@@ -3219,7 +3219,7 @@ if (localStorage.getItem("blogbg") != undefined) {
 } else {
     document.getElementById("defineBg").innerText = `:root{
     --default-bg: url(https://t.mwm.moe/pc);
-    --darkmode-bg:url("../assets/bg.png");
+    --darkmode-bg:url("/assets/bg.png");
     --mobileday-bg: url(https://t.mwm.moe/mp);
     --mobilenight-bg: url(https://api.ghser.com/random/pe.php);
   }`;
