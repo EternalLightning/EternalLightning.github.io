@@ -3221,7 +3221,7 @@ if (localStorage.getItem("blogbg") != undefined) {
     --default-bg: url(https://t.mwm.moe/pc);
     --darkmode-bg:url("/assets/bg.png");
     --mobileday-bg: url(https://t.mwm.moe/mp);
-    --mobilenight-bg: url(https://api.ghser.com/random/pe.php);
+    --mobilenight-bg: url(/assets/bg_portrait.jpg);
   }`;
 }
 
