@@ -687,7 +687,7 @@ if (document.body.clientWidth > 992) {
             var defaultSetting = {
                 top: '0',
                 scroWidth: 6 + 'px',
-                z_index: 9999,
+                z_index: 1,
                 zoom: 0.8,
                 borderRadius: 5 + 'px',
                 right: 55.6 + 'px',
@@ -717,14 +717,13 @@ if (document.body.clientWidth > 992) {
                     'right': setting.right,
                     'background-image': 'url(' + setting.scImg + ')',
                     // 'background-image': '-webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent)',
-                    'border-radius': '2em',
                     'background-size': 'contain'
                 });
             $("#" + setting.nekoname)
                 .css({
                     'position': 'fixed',
                     'top': basicInfo.Band_H * setting.zoom * basicInfo.ViewH * 0.01 - 50 + 'px',
-                    'z-index': setting.z_index * 10,
+                    'z-index': setting.z_index,
                     'right': setting.right,
                     'background-image': 'url(' + setting.nekoImg + ')',
                 });
@@ -745,7 +744,6 @@ if (document.body.clientWidth > 992) {
                             'right': setting.right,
                             'background-image': 'url(' + setting.scImg + ')',
                             // 'background-image': '-webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent)',
-                            'border-radius': '2em',
                             'background-size': 'contain'
                         });
                     $("#" + setting.nekoname)
