@@ -1675,7 +1675,7 @@ figure.highlight pre .javascript .function {
 #article-container pre,
 #article-container code {
   font-size: 18px;
-  font-family: Consolas_1, var(--global-font), "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif !important;
+  font-family: Consolas, var(--global-font), "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif !important;
 }
 #article-container code {
   padding: 2px 4px;
@@ -6593,7 +6593,7 @@ blockquote.pullquote.right {
 
 @font-face {
     font-family: MiSans;
-    src: url(https://data-static.netdun.net/Fomalhaut/fonts/MiSans.woff2);
+    src: url(/assets/MiSans-Normal.woff2);
     font-display: swap;
 }
 
@@ -6644,9 +6644,18 @@ h1.post-title {
     font-weight: bold !important;
 }
 
-.layout {
-    max-width: 1900px !important;
-    margin: 0 auto !important;
+@media screen and (max-aspect-ratio: 19/9) {
+    .layout {
+        max-width: 1600px !important;
+        margin: 0 auto !important;
+    }
+}
+
+@media screen and (min-aspect-ratio: 19/9) {
+    .layout {
+        max-width: 1900px !important;
+        margin: 0 auto !important;
+    }
 }
 
 .aside-content{
@@ -8588,7 +8597,7 @@ li.categoryBar-list-item {
 #rightMenu {
     display: none;
     position: fixed;
-    width: 160px;
+    width: 180px;
     height: fit-content;
     top: 10%;
     left: 10%;

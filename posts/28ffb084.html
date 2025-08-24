@@ -1,0 +1,816 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><div id="myscoll"></div><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>电力电子技术 | 永恒闪电⚡的博客</title><meta name="keywords" content="电气工程"><meta name="author" content="永恒闪电"><meta name="copyright" content="永恒闪电"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="电力电子技术复习总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="电力电子技术">
+<meta property="og:url" content="https://eternallightning.github.io/posts/28ffb084.html">
+<meta property="og:site_name" content="永恒闪电⚡的博客">
+<meta property="og:description" content="电力电子技术复习总结">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://eternallightning.github.io/assets/cover/PE.png">
+<meta property="article:published_time" content="2025-07-28T01:48:50.000Z">
+<meta property="article:modified_time" content="2025-08-21T03:10:41.798Z">
+<meta property="article:author" content="永恒闪电">
+<meta property="article:tag" content="电气工程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://eternallightning.github.io/assets/cover/PE.png"><link rel="shortcut icon" href="/"><link rel="canonical" href="https://eternallightning.github.io/posts/28ffb084"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.7.2/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"这篇文章已经有","messageNext":"天未更新了，内容可能过时！"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.js',
+      css: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '电力电子技术',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-08-21 11:10:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css"><style id="themeColor"></style><style id="rightSide"></style><style id="transPercent"></style><style id="blurNum"></style><style id="settingStyle"></style><span id="fps"></span><style id="defineBg"></style><style id="menu_shadow"></style><svg aria-hidden="true" style="position:absolute; overflow:hidden; width:0; height:0"><symbol id="icon-sun" viewBox="0 0 1024 1024"><path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path></symbol><symbol id="icon-moon" viewBox="0 0 1024 1024"><path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path></symbol></svg><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="永恒闪电⚡的博客" type="application/atom+xml">
+</head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/head.jpg" onerror="onerror=null;src='/assets/r1.png'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-home"></use></svg><span class="menu_word" style="font-size:17px"> 首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--article"></use></svg><span class="menu_word" style="font-size:17px"> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guidang1">                   </use></svg><span class="menu_word" style="font-size:17px"> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-sekuaibiaoqian">                   </use></svg><span class="menu_word" style="font-size:17px"> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-fenlei">                   </use></svg><span class="menu_word" style="font-size:17px"> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pinweishenghuo"></use></svg><span class="menu_word" style="font-size:17px"> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/life/music/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-yinle">                   </use></svg><span class="menu_word" style="font-size:17px"> 八音盒</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/movies/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-dianying1">                   </use></svg><span class="menu_word" style="font-size:17px"> 影院</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/games/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-youxishoubing">                   </use></svg><span class="menu_word" style="font-size:17px"> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xiangzi"></use></svg><span class="menu_word" style="font-size:17px"> 八宝箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/box/gallery/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-tubiaozhizuomoban">                   </use></svg><span class="menu_word" style="font-size:17px"> 画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/animation/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-nvwumao">                   </use></svg><span class="menu_word" style="font-size:17px"> 动画</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/nav/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-zhifengche">                   </use></svg><span class="menu_word" style="font-size:17px"> 网址导航</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shejiaoxinxi"></use></svg><span class="menu_word" style="font-size:17px"> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/social/fcircle/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pengyouquan">                   </use></svg><span class="menu_word" style="font-size:17px"> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-liuyan">                   </use></svg><span class="menu_word" style="font-size:17px"> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/social/link/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-lianjie">                   </use></svg><span class="menu_word" style="font-size:17px"> 友人帐</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-wangye"></use></svg><span class="menu_word" style="font-size:17px"> 网站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/site/census/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--tongjibiao">                   </use></svg><span class="menu_word" style="font-size:17px"> 网站统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/echarts/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shujutongji1">                   </use></svg><span class="menu_word" style="font-size:17px"> 文章统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/time/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xianxingshalou">                   </use></svg><span class="menu_word" style="font-size:17px"> 旧时光</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-maoliang"></use></svg><span class="menu_word" style="font-size:17px"> 个人</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/personal/bb/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-qunliaotian">                   </use></svg><span class="menu_word" style="font-size:17px"> 唠叨</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/love/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-love-sign">                   </use></svg><span class="menu_word" style="font-size:17px"> 恋爱小屋</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/about/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-paperplane">                   </use></svg><span class="menu_word" style="font-size:17px"> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">永恒闪电⚡的博客</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-home"></use></svg><span class="menu_word" style="font-size:17px"> 首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--article"></use></svg><span class="menu_word" style="font-size:17px"> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guidang1">                   </use></svg><span class="menu_word" style="font-size:17px"> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-sekuaibiaoqian">                   </use></svg><span class="menu_word" style="font-size:17px"> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-fenlei">                   </use></svg><span class="menu_word" style="font-size:17px"> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pinweishenghuo"></use></svg><span class="menu_word" style="font-size:17px"> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/life/music/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-yinle">                   </use></svg><span class="menu_word" style="font-size:17px"> 八音盒</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/movies/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-dianying1">                   </use></svg><span class="menu_word" style="font-size:17px"> 影院</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/games/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-youxishoubing">                   </use></svg><span class="menu_word" style="font-size:17px"> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xiangzi"></use></svg><span class="menu_word" style="font-size:17px"> 八宝箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/box/gallery/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-tubiaozhizuomoban">                   </use></svg><span class="menu_word" style="font-size:17px"> 画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/animation/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-nvwumao">                   </use></svg><span class="menu_word" style="font-size:17px"> 动画</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/nav/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-zhifengche">                   </use></svg><span class="menu_word" style="font-size:17px"> 网址导航</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shejiaoxinxi"></use></svg><span class="menu_word" style="font-size:17px"> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/social/fcircle/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pengyouquan">                   </use></svg><span class="menu_word" style="font-size:17px"> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-liuyan">                   </use></svg><span class="menu_word" style="font-size:17px"> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/social/link/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-lianjie">                   </use></svg><span class="menu_word" style="font-size:17px"> 友人帐</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-wangye"></use></svg><span class="menu_word" style="font-size:17px"> 网站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/site/census/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--tongjibiao">                   </use></svg><span class="menu_word" style="font-size:17px"> 网站统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/echarts/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shujutongji1">                   </use></svg><span class="menu_word" style="font-size:17px"> 文章统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/time/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xianxingshalou">                   </use></svg><span class="menu_word" style="font-size:17px"> 旧时光</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-maoliang"></use></svg><span class="menu_word" style="font-size:17px"> 个人</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/personal/bb/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-qunliaotian">                   </use></svg><span class="menu_word" style="font-size:17px"> 唠叨</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/love/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-love-sign">                   </use></svg><span class="menu_word" style="font-size:17px"> 恋爱小屋</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/about/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-paperplane">                   </use></svg><span class="menu_word" style="font-size:17px"> 关于</span></a></li></ul></div></div><center id="name-container"><a id="page-name" href="javascript:scrollToTop()">PAGE_NAME</a></center><div id="nav-right"><div id="search-button"><a class="search faa-parent animated-hover" title="检索站内任何你想要的信息"><svg class="faa-tada icon" style="height:24px;width:24px;fill:currentColor;position:relative;top:6px" aria-hidden="true"><use xlink:href="#icon-valentine_-search-love-find-heart"></use></svg><span> 搜索</span></a></div><a class="meihua faa-parent animated-hover" onclick="toggleWinbox()" title="美化设置-自定义你的风格" id="meihua-button"><svg class="faa-tada icon" style="height:26px;width:26px;fill:currentColor;position:relative;top:8px" aria-hidden="true"><use xlink:href="#icon-tupian1"></use></svg></a><a class="sun_moon faa-parent animated-hover" onclick="switchNightMode()" title="浅色和深色模式转换" id="nightmode-button"><svg class="faa-tada" style="height:25px;width:25px;fill:currentColor;position:relative;top:7px" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon">       </use></svg></a><div id="toggle-menu"><a><i class="fas fa-bars fa-fw"></i></a></div></div></div></nav><div id="post-info"><h1 class="post-title">电力电子技术</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><svg class="meta_icon post-meta-icon" style="width:30px;height:30px;position:relative;top:10px"><use xlink:href="#icon-rili"></use></svg><span class="post-meta-label">发表于 </span><time class="post-meta-date-created" datetime="2025-07-28T01:48:50.000Z" title="发表于 2025-07-28 09:48:50">2025-07-28</time><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:18px;height:18px;position:relative;top:5px"><use xlink:href="#icon-gengxin1"></use></svg><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-08-21T03:10:41.798Z" title="更新于 2025-08-21 11:10:41">2025-08-21</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:18px;height:18px;position:relative;top:5px"><use xlink:href="#icon-biaoqian"></use></svg><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%94%9F%E6%B4%BB/">学习生活</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><svg class="meta_icon post-meta-icon" style="width:25px;height:25px;position:relative;top:8px"><use xlink:href="#icon-charuword"></use></svg><span class="post-meta-label">字数总计:</span><span class="word-count">9064</span><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:20px;height:20px;position:relative;top:5px"><use xlink:href="#icon-shizhong"></use></svg><span class="post-meta-label">阅读时长:</span><span>33分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="电力电子技术"><svg class="meta_icon post-meta-icon" style="width:25px;height:25px;position:relative;top:5px"><use xlink:href="#icon-eye"></use></svg><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章 绪论"></a>第一章 绪论</h1><p>电力电子技术是在电子、电力和控制技术基础上发展起来的新兴学科。</p>
+<p>电力电子技术的三要素是：器件、拓扑和控制。</p>
+<p>根据电能的输入——输出形式来分，主要包含以下四种基本变换</p>
+<ol>
+<li>AC-DC变换: 整流器</li>
+<li>DC-AC变换: 逆变器</li>
+<li>DC-DC变换: 直流变换器、斩波器</li>
+<li>AC-AC变换: 交流变换器、周波变流器</li>
+</ol>
+<h1 id="第二章-电力电子器件"><a href="#第二章-电力电子器件" class="headerlink" title="第二章 电力电子器件"></a>第二章 电力电子器件</h1><h2 id="电力电子器件的概念和特征"><a href="#电力电子器件的概念和特征" class="headerlink" title="电力电子器件的概念和特征"></a>电力电子器件的概念和特征</h2><p>电力电子器件具有以下特点：</p>
+<ol>
+<li>处理功率大</li>
+<li>工作在<strong>开关状态</strong></li>
+<li>需要控制电路</li>
+<li>需要驱动电路</li>
+<li>功率损耗大</li>
+</ol>
+<p>电力电子器件的功率损耗主要包括通态损耗、断态损耗和开关损耗，其中开关损耗又包括开通损耗和关断损耗。</p>
+<h2 id="电力电子器件的分类"><a href="#电力电子器件的分类" class="headerlink" title="电力电子器件的分类"></a>电力电子器件的分类</h2><p>电力电子器件通常按照能够被控制电路信号所控制的程度分为：</p>
+<ol>
+<li>不可控器件：功率二极管</li>
+<li>半控型器件：晶闸管 SCR</li>
+<li>全控型器件：电力晶体管 GTR，门极可关断晶闸管 GTO，电力场效应管 MOSFET 等</li>
+</ol>
+<p>按照控制电路加在电力电子器件控制端和公共端之间信号的性质，全控型器件又可分为<strong>电流型</strong>和<strong>电压型</strong>。</p>
+<p>根据器件内部导电粒子的性质，全控型器件又可分为<strong>单极型</strong>、<strong>双极型</strong>和<strong>复合型</strong>。器件内部只有一种导电粒子的称为单极型器件，如电力场效应管；具有两种导电粒子的称为双极型器件，如电力三极管；由单极型和双极型复合成的器件称为复合型器件，如绝缘栅双极晶体管 IGBT。</p>
+<h2 id="电力电子器件基础"><a href="#电力电子器件基础" class="headerlink" title="电力电子器件基础"></a>电力电子器件基础</h2><p>实际上，这一部分在模拟电子技术中已经学习过，但在电力电子技术中，会有更多的补充知识，因此这里再次详细叙述一遍。</p>
+<h3 id="PN-结"><a href="#PN-结" class="headerlink" title="PN 结"></a>PN 结</h3><p>完全纯净的、结构完整的半导体晶体称为<strong>本征半导体</strong>；在掺入杂质后，形成的半导体称为<strong>杂质半导体</strong>。在掺杂后，会引入多子，同时由于热激发，会产生少量少子。</p>
+<p>载流子因为热运动而从高浓度区向低浓度区的扩散称为<strong>扩散运动</strong>，而由于电场的作用使载流子运动称为<strong>漂移运动</strong>。内电场的增强会削弱扩散运动，增强漂移运动。</p>
+<p>当 P 型半导体和 N 型半导体接触时，P 型半导体中的多子（空穴）会向 N 型半导体扩散，而 N 型半导体中的多子（电子）会向 P 型半导体扩散。由于两种载流子在接触面处的复合，形成了一个电荷中性区，称为<strong>空间电荷区</strong>。</p>
+<p>PN 结包含三种反向击穿形式：雪崩击穿（高电压）、齐纳击穿（高掺杂）和热击穿。</p>
+<p>PN 结包含势垒电容和扩散电容（存储电容）。</p>
+<h2 id="不可控器件——功率二极管"><a href="#不可控器件——功率二极管" class="headerlink" title="不可控器件——功率二极管"></a>不可控器件——功率二极管</h2><p>功率二极管有三种典型应用：整流、续流、钳位。</p>
+<h3 id="基本结构与工作原理"><a href="#基本结构与工作原理" class="headerlink" title="基本结构与工作原理"></a>基本结构与工作原理</h3><p>功率二极管本质也是 PN 结，但由于其结构和材料的不同，具有更大的电流和电压承受能力。功率二极管与信息电子二极管相比，具有以下特点：</p>
+<ol>
+<li>功率二极管体积更大</li>
+<li>功率二极管大都是垂直导电结构</li>
+<li>功率二极管在 P 区和 N 区之间多了一层低掺杂 N- 区，因此功率二极管的结构也被称为 P-i-N 结构</li>
+</ol>
+<p>由于<strong>电导调制效应</strong>，功率二极管尽管有低掺杂区，其正向压降仍然较小。</p>
+<p>功率二极管是负温度系数的，即温度升高时，电阻减小。</p>
+<h3 id="静态特性"><a href="#静态特性" class="headerlink" title="静态特性"></a>静态特性</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/功率二极管的静态特性.png" alt=""></p>
+<h3 id="动态特性"><a href="#动态特性" class="headerlink" title="动态特性"></a>动态特性</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/功率二极管的动态特性.png" alt=""></p>
+<p>由正向偏置转为反向偏置后，功率二极管并不能立即关断，而是会有一个反向恢复过程。图中 $t_3$ 末期，电流下降为零，但是由于功率二极管的空间电荷区两侧（特别是多掺杂 N 区）储存有大量少子，在外加电压的作用下被抽出二极管，流过较大的反向电流。由于寄生电感的作用，二极管将产生很大的反向电压 $V_\mathrm{rr}$ 。</p>
+<p>定义如下重要参数：</p>
+<ol>
+<li><strong>延迟时间</strong> $t_\mathrm{d}=t_4$：从反向恢复电流开始上升到反向恢复电流到达最大的时间。</li>
+<li><strong>电流下降时间</strong> $t_\mathrm{f}=t_5$：从反向恢复电流到达最大到反向恢复电流下降到零的时间。</li>
+<li><strong>反向恢复时间</strong> $t_\mathrm{rr}=t_\mathrm{d}+t_\mathrm{f}$：从反向恢复电流开始上升到反向恢复电流下降到零的时间。</li>
+<li>恢复特性的软度（<strong>恢复系数</strong>） $S_\mathrm{r}=\frac{t_\mathrm{f}}{t_\mathrm{d}}$：恢复系数越大，恢复性能越软，尖峰、振荡越小。</li>
+</ol>
+<p>由反向偏置到正向偏置时，功率二极管也会有一个正向恢复过程。出现电压过冲的原因是电导调制效应起作用需要一定时间。</p>
+<h3 id="肖特基二极管"><a href="#肖特基二极管" class="headerlink" title="肖特基二极管"></a>肖特基二极管</h3><p>肖特基二极管是由金属和 N 型半导体接触形成的 PN 结，具有以下特点：</p>
+<ol>
+<li>多子导电的单极性器件</li>
+<li>反向恢复时间极短</li>
+<li>损耗小</li>
+<li>反向耐压能力弱</li>
+</ol>
+<h3 id="二极管的主要类型"><a href="#二极管的主要类型" class="headerlink" title="二极管的主要类型"></a>二极管的主要类型</h3><ol>
+<li><p>普通二极管</p>
+<p> 又称为整流二极管，适用于开关频率不高 (1 kHz 以下) 的场合，反向恢复时间长。</p>
+</li>
+<li><p>快恢复二极管</p>
+<p> 适用于开关频率较高 (1 kHz 至 10 kHz) 的场合，反向恢复时间短。多用于 DC-DC 电路。</p>
+</li>
+<li><p>肖特基二极管</p>
+<p> 属于多子器件，反向恢复时间极短，正向恢复过程中也不会有明显的电压过冲。</p>
+</li>
+</ol>
+<h2 id="半控型器件——晶闸管"><a href="#半控型器件——晶闸管" class="headerlink" title="半控型器件——晶闸管"></a>半控型器件——晶闸管</h2><p>适用于大功率、低开关频率场合。</p>
+<h3 id="基本结构与工作原理-1"><a href="#基本结构与工作原理-1" class="headerlink" title="基本结构与工作原理"></a>基本结构与工作原理</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/晶闸管结构.png" alt=""></p>
+<p>晶闸管是三端四层结构，具有 P-N-P-N 结构。如果把晶闸管斜切一刀，则可以看做 PNP 和 NPN 两个三极管的组合。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/晶闸管模型.png" alt=""></p>
+<p>如图，当 G 极加上电压后，三极管 $T_2$ 导通，$T_1$ 也会导通。此时正反馈形成，即使去掉 G 极的电压，晶闸管仍然会导通。我们可以列出如下方程</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+I_\mathrm{C1}=\alpha_1 I_\mathrm{A} + I_\mathrm{CBO1} \\
+\\
+I_\mathrm{C2}=\alpha_2 I_\mathrm{K} + I_\mathrm{CBO2} \\
+\\
+I_\mathrm{K}=I_\mathrm{A}+I_\mathrm{G} \\
+\\
+I_\mathrm{A}=I_\mathrm{C1}+I_\mathrm{C2}
+\end{cases}</script><p>其中，$\alpha_1$ 和 $\alpha_2$ 分别是 $T_1$ 和 $T_2$ 的共基极电流增益；$I_\mathrm{CBO1}$ 和 $I_\mathrm{CBO2}$ 分别是 $T_1$ 和 $T_2$ 的共基极漏电流。由此可以解得</p>
+<script type="math/tex; mode=display">I_\mathrm{A}=\frac{\alpha_2I_\mathrm{G}+I_\mathrm{CBO1}+I_\mathrm{CBO2}}{1-(\alpha_1+\alpha_2)}</script><p>所以，导通时有 $ \alpha_1+\alpha_2 \approx 1 $ 。</p>
+<h3 id="静态特性-1"><a href="#静态特性-1" class="headerlink" title="静态特性"></a>静态特性</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/晶闸管静态特性.png" alt=""></p>
+<p>图中，$V_\mathrm{DRM}$, $V_\mathrm{RRM}$ 是晶闸管的<strong>正反向断态重复峰值电压</strong>；$V_\mathrm{DSM}$, $V_\mathrm{RSM}$ 是晶闸管的<strong>正反向断态不重复峰值电压</strong>；$V_\mathrm{BO}$ 是晶闸管的<strong>正向转折电压</strong>；$I_\mathrm{H}$ 是晶闸管的<strong>维持电流</strong>。</p>
+<p>晶闸管的额定电压是正反向断态重复峰值电压 $V_\mathrm{DRM}$ 和 $V_\mathrm{RRM}$ 中的较小值。</p>
+<p>维持电流是指使晶闸管维持导通的最小电流。另一个概念是<strong>擎住电流</strong> $I_\mathrm{L}$，是指使晶闸管从关断状态转为导通状态并移除触发信号的最小电流，一般为维持电流的 2~4 倍。</p>
+<h3 id="动态特性-1"><a href="#动态特性-1" class="headerlink" title="动态特性"></a>动态特性</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/晶闸管动态特性.png" alt=""></p>
+<p>图中，$t_\mathrm{d}$ 是<strong>延迟时间</strong>，指从门极电流阶跃时刻开始，到阳极电流上升到稳态值的 10% 的时间；$t_\mathrm{r}$ 是<strong>上升时间</strong>，指从阳极电流从稳态值的 10% 上升到稳态值的 90% 的时间；<strong>开通时间</strong> $t_\mathrm{on}=t_\mathrm{d}+t_\mathrm{r}$ 。</p>
+<p>$t_\mathrm{rr}$ 是<strong>反向阻断恢复时间</strong>，指从正向电流下降到零到反向电流下降到零的时间；$t_\mathrm{gr}$ 是<strong>正向阻断恢复时间</strong>，在反向恢复过程结束后，由于载流子的复合过程比较慢（PN 结中的少子难以通过外电路抽取），晶闸管恢复正向阻断电压的能力需要一定时间。<strong>关断时间</strong> $t_\mathrm{off}=t_\mathrm{rr}+t_\mathrm{gr}$ 。</p>
+<h2 id="全控型器件——门极可关断晶闸管"><a href="#全控型器件——门极可关断晶闸管" class="headerlink" title="全控型器件——门极可关断晶闸管"></a>全控型器件——门极可关断晶闸管</h2><p>门极可关断晶闸管拥有晶闸管全部的优点，同时可以通过门极施加负的脉冲信号关断。</p>
+<h3 id="基本结构与工作原理-2"><a href="#基本结构与工作原理-2" class="headerlink" title="基本结构与工作原理"></a>基本结构与工作原理</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/门极可关断晶闸管结构.png" alt=""></p>
+<p>在晶闸管一章，我们已经学习到，导通电流 $I_\mathrm{A}=\displaystyle\frac{\alpha_2I_\mathrm{G}+I_\mathrm{CBO1}+I_\mathrm{CBO2}}{1-(\alpha_1+\alpha_2)}$。而 GTO 具有以下特点，使其能够自主关断：</p>
+<ol>
+<li>设计 $\alpha_2$ 较大，使晶体管 $T_2$ 控制灵敏</li>
+<li>导通后 $\alpha_1+\alpha_2$ 更接近于 1<br>当然，这样的设计也导致了其管压降比较大。</li>
+</ol>
+<h2 id="全控型器件——电力晶体管"><a href="#全控型器件——电力晶体管" class="headerlink" title="全控型器件——电力晶体管"></a>全控型器件——电力晶体管</h2><h3 id="基本结构与工作原理-3"><a href="#基本结构与工作原理-3" class="headerlink" title="基本结构与工作原理"></a>基本结构与工作原理</h3><p>电力晶体管比普通三极管能够承受更高的电压，这是因为其在普通三极管的基础上增加了低掺杂 N- 层。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/电力晶体管结构.png" alt=""></p>
+<h2 id="全控型器件——电力场效应晶体管"><a href="#全控型器件——电力场效应晶体管" class="headerlink" title="全控型器件——电力场效应晶体管"></a>全控型器件——电力场效应晶体管</h2><p>电力场效应晶体管分为结型 JFET 和绝缘栅型 MOSFET 两种，都是多子导电型器件。一般而言我们很少用到结型场效应管，所以后文我们以 MOSFET 的学习为主。MOSFET 具有四层结构 N+, P, N-, N+ 。</p>
+<h3 id="基本结构与工作原理-4"><a href="#基本结构与工作原理-4" class="headerlink" title="基本结构与工作原理"></a>基本结构与工作原理</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/MOSFET结构.png" alt=""></p>
+<p>MOSFET 具有正温度系数，易于并联。</p>
+<h3 id="动态特性-2"><a href="#动态特性-2" class="headerlink" title="动态特性"></a>动态特性</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/MOSFET开通.png" alt=""></p>
+<p>这里只介绍米勒平台的形成。</p>
+<p>第一阶段，$t_\mathrm{d}$ 时段，此阶段对 $C_\mathrm{GS}$ 和 $C_\mathrm{GD}$ 两个电容充电。$V_\mathrm{D}$ 保持不变，所以主要考虑对 $C_\mathrm{GS}$ 的充电直至其达到开启电压 $V_\mathrm{GS,th}$（大约2-3V），从而结束该阶段。</p>
+<p>第二阶段，$t_\mathrm{ri}$ 时段，该阶段开始已经达到门极开启电压，$i_\mathrm{D}$ 在此时段开始上升。从二极管到 MOSFET 的换流开始，因为换流结束前二极管仍然有电流，所以 $V_\mathrm{D}$ 仍然被钳位在直流电压。</p>
+<p>第三阶段，$t_\mathrm{fv1}$ 时段，该阶段开始时，$i_\mathrm{D}$ 刚达到满载电流，则二极管关断，不再钳位 $V_\mathrm{D}$ 。此时在门极驱动电路对 $C_\mathrm{GD}$ 反向充电作用下，$V_\mathrm{DS}$ 开始快速下降。同时因为 $i_\mathrm{D}$ 已经达到满载电流不变，受跨导曲线的约束，$V_\mathrm{GS}$ 必定不变。综上两个原因，可以认为驱动电路几乎只对 $C_\mathrm{GD}$ 充电，而不再对 $C_\mathrm{GS}$ 充电，$V_\mathrm{GS}$ 不变而形成一个平台，称为米勒平台。</p>
+<h3 id="特征总结"><a href="#特征总结" class="headerlink" title="特征总结"></a>特征总结</h3><ol>
+<li>MOSFET 的开关速度和其输入电容的充放电有很大关系</li>
+<li>多子导电，开关速度快</li>
+<li>开关时间短，工作频率是主要电力电子器件中最高的</li>
+<li>多子导电，没有电导调制效应，饱和导通后会等效成一个电阻</li>
+<li>多用于电压较低的场合</li>
+<li>具有正温度系数，易于并联，没有二次击穿现象</li>
+</ol>
+<h2 id="全控型器件——绝缘栅双极晶体管"><a href="#全控型器件——绝缘栅双极晶体管" class="headerlink" title="全控型器件——绝缘栅双极晶体管"></a>全控型器件——绝缘栅双极晶体管</h2><p>绝缘栅双极晶体管（IGBT）是 MOSFET 和 GTO 的结合体，具有 MOSFET 的高输入阻抗和 GTO 的高电流密度。IGBT 具有五层结构 N+, P, N-, N+, P 。</p>
+<h3 id="基本结构与工作原理-5"><a href="#基本结构与工作原理-5" class="headerlink" title="基本结构与工作原理"></a>基本结构与工作原理</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/绝缘栅双极晶体管结构.png" alt=""></p>
+<h3 id="动态特性-3"><a href="#动态特性-3" class="headerlink" title="动态特性"></a>动态特性</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/IGBT动态特性.png" alt=""></p>
+<p>这里只介绍电流拖尾效应。</p>
+<p>图中，$t_\mathrm{fi1}$ 对应 IGBT 内部 MOSFET 和 GTR 一起的关断过程，这段时间集电极电流 $i_\mathrm{C}$ 下降较快。$t_\mathrm{fi2}$ 对应 IGBT 内部 PNP 晶体管的关断过程，这段时间内因为 MOSFET 已经关断，晶体管无基区少子抽取通道，所以晶体管 N 基区内的少子复合缓慢，造成 $i_\mathrm{C}$ 下降较慢，这称为 IGBT 的电流拖尾现象。</p>
+<p>本章的最后，放一个电力电子器件的对比表格：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">器件</th>
+<th style="text-align:center">功率</th>
+<th style="text-align:center">开关速度</th>
+<th style="text-align:center">电压等级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">电力晶体管 GTR</td>
+<td style="text-align:center">中</td>
+<td style="text-align:center">中</td>
+<td style="text-align:center">中</td>
+</tr>
+<tr>
+<td style="text-align:center">门极可关断晶闸管 GTO</td>
+<td style="text-align:center">高</td>
+<td style="text-align:center">慢</td>
+<td style="text-align:center">高</td>
+</tr>
+<tr>
+<td style="text-align:center">电力场效应管 MOSFET</td>
+<td style="text-align:center">低</td>
+<td style="text-align:center">快</td>
+<td style="text-align:center">低</td>
+</tr>
+<tr>
+<td style="text-align:center">绝缘栅双极晶体管 IGBT</td>
+<td style="text-align:center">中</td>
+<td style="text-align:center">中</td>
+<td style="text-align:center">高</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="第三章-前置知识"><a href="#第三章-前置知识" class="headerlink" title="第三章 前置知识"></a>第三章 前置知识</h1><h2 id="变换器的开关模式控制"><a href="#变换器的开关模式控制" class="headerlink" title="变换器的开关模式控制"></a>变换器的开关模式控制</h2><p>各种变换器主要有两种变换模式：<strong>脉冲频率调制</strong> (PFM) 和<strong>脉冲宽度调制</strong> (PWM) 。PFM 通过改变开关频率来改变输出电压，而 PWM 则通过改变开关的占空比来改变输出电压。现在 PFM 很少使用，PWM 为主流的控制方式。</p>
+<p>为了得到占空比可调的 PWM 信号，我们会设置一个锯齿波 $v_\mathrm{ST}$ （称为<strong>载波</strong>） 和控制电压 $v_\mathrm{control}$ （称为<strong>调制波</strong>），当 $v_\mathrm{control}$ 大于 $v_\mathrm{ST}$ 时，输出高电平，否则输出低电平。这样我们只需要控制 $v_\mathrm{control}$ 的大小，就可以控制输出占空比。</p>
+<h2 id="非正弦周期波形分析"><a href="#非正弦周期波形分析" class="headerlink" title="非正弦周期波形分析"></a>非正弦周期波形分析</h2><p>非正弦周期波形可以通过傅里叶级数展开为一系列正弦波的叠加。对于周期为 $T$ 的非正弦周期波形 $i_\mathrm{s}(t)$，使用傅里叶级数展开，可以得到基波 $i_\mathrm{s1}$ 和高次谐波 $i_{\mathrm{s}h}$ 。</p>
+<p><strong>电流有效值</strong>为</p>
+<script type="math/tex; mode=display">I_s=\sqrt{\frac{1}{T}\int_0^T i_s^2(t)dt} = \sqrt{I_\mathrm{s1}^2+\sum_{h \ne 1}I_{\mathrm{s}h}^2}</script><p><strong>畸变分量</strong>为</p>
+<script type="math/tex; mode=display">i_\mathrm{dis} = i_\mathrm{s}(t) - i_\mathrm{s1}(t) = \sum_{h \ne 1}i_{\mathrm{s}h}(t)</script><p>畸变分量有效值为</p>
+<script type="math/tex; mode=display">I_\mathrm{dis} = \sqrt{\sum_{h \ne 1}I_{\mathrm{s}h}^2}</script><p><strong>总谐波畸变率</strong>为</p>
+<script type="math/tex; mode=display">{THD} = \frac{I_\mathrm{dis}}{I_\mathrm{s1}} = \frac{\sqrt{I_\mathrm{s}^2-I_\mathrm{s1}^2}}{I_\mathrm{s1}}</script><p>假如输入电压为标准正弦波，则平均功率为</p>
+<script type="math/tex; mode=display">P=\frac{1}{T}\int_0^T v_\mathrm{s}(t)i_\mathrm{s}(t)dt = V_\mathrm{s}I_\mathrm{s1}\cos\varphi</script><p>功率因数为</p>
+<script type="math/tex; mode=display">{PF} = \frac{P}{V_\mathrm{s}I_\mathrm{s}} = \frac{I_\mathrm{s1}}{I_\mathrm{s}}\cos\varphi = k_\mathrm{d}\cos\varphi = \frac{1}{\sqrt{1+{THD}^2}}{DPF}</script><p>其中，$k_\mathrm{d}=\displaystyle\frac{I_\mathrm{s1}}{I_\mathrm{s}}$ 是<strong>畸变因数</strong>，$\cos\varphi$ 是<strong>相移功率因数</strong> DPF。</p>
+<h2 id="伏秒平衡与安秒平衡"><a href="#伏秒平衡与安秒平衡" class="headerlink" title="伏秒平衡与安秒平衡"></a>伏秒平衡与安秒平衡</h2><p>伏秒平衡是指处于稳定状态的电感，在一个周期内，电压的平均值为 0.</p>
+<p>安秒平衡是指处于稳定状态的电容，在一个周期内，电流的平均值为 0.</p>
+<p>实际上就是电荷守恒和磁链守恒。</p>
+<h1 id="第四章-DC-DC-变换器"><a href="#第四章-DC-DC-变换器" class="headerlink" title="第四章 DC-DC 变换器"></a>第四章 DC-DC 变换器</h1><p>DC-DC 变换器的典型应用有：开关电源、充电器、电机驱动器等，按照输入与输出间是否有电气间隔可分为隔离型和非隔离型。</p>
+<p>非隔离型 DC-DC 变换器按照所用的有源功率器件的个数，可以分为单管、双管和四管三类。单管 DC-DC 变换器主要有降压型 (Buck)、升压型 (Boost)、降升压型 (Buck-Boost)、Cuk 变换器、Zeta 变换器和 Sepic 变换器。</p>
+<p>单管隔离型 DC-DC 变换器主要有正激式 (Forward)、反激式 (Flyback) 两种。双管隔离型 DC-DC 变换器主要有双管正激、双管反激、推挽式、半桥式四种。</p>
+<h2 id="降压式变换器"><a href="#降压式变换器" class="headerlink" title="降压式变换器"></a>降压式变换器</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/Buck.png" alt=""></p>
+<p>Buck 变换器有两种工作模式，即<strong>连续导通模式</strong> (CCM) 和<strong>断续导通模式</strong> (DCM)。这两种工作方式之间有一个边界，称为临界导通模式。这里只介绍连续导通模式。</p>
+<h3 id="连续导通模式分析"><a href="#连续导通模式分析" class="headerlink" title="连续导通模式分析"></a>连续导通模式分析</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/CCMBuck.png" alt=""></p>
+<p>在分析时，由于电容的作用，输出电压 $V_\mathrm{O}$ 可以看做是一个常数。</p>
+<p>开关导通时，电感充电，电感电流成线性上升</p>
+<script type="math/tex; mode=display">i_\mathrm{L}(t)=\frac{V_\mathrm{D}-V_\mathrm{O}}{L}t + i_\mathrm{L}(0)</script><p>当 $t=t_\mathrm{on}$ 时，电感电流达到最大值 $i_\mathrm{L, peak}$。</p>
+<p>开关关断时，电感通过二极管放电，电感电流成线性下降</p>
+<script type="math/tex; mode=display">i_\mathrm{L}(t)= -\frac{V_\mathrm{O}}{L}(t-t_\mathrm{on}) + i_\mathrm{L, peak}</script><p>由伏秒平衡可以得到</p>
+<script type="math/tex; mode=display">(V_\mathrm{D}-V_\mathrm{O})t_\mathrm{on} = V_\mathrm{O}t_\mathrm{off}</script><p>化简得到</p>
+<script type="math/tex; mode=display">\frac{V_\mathrm{O}}{V_\mathrm{D}}=D</script><p>如果忽略功率损耗，则有</p>
+<script type="math/tex; mode=display">\frac{I_\mathrm{O}}{I_\mathrm{D}}=\frac{1}{D}</script><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/临界模式Buck.png" alt=""></p>
+<p>在临界模式下，电感电流平均值为</p>
+<script type="math/tex; mode=display">I_\mathrm{LB} = \frac{1}{2}i_\mathrm{L, peak} = \frac{V_\mathrm{D}-V_\mathrm{O}}{2L}t_\mathrm{on} = \frac{DT_\mathrm{s}}{2L}(V_\mathrm{D}-V_\mathrm{O}) = I_\mathrm{OB}</script><p>如果输入电压为常数，则有</p>
+<script type="math/tex; mode=display">I_\mathrm{LB} = \frac{V_\mathrm{D}T_\mathrm{s}}{2L}D(1-D)</script><p>$D$ 为变量，可以求出抛物线最大值。</p>
+<p>如果输出电压为常数，则有</p>
+<script type="math/tex; mode=display">I_\mathrm{LB} = \frac{V_\mathrm{O}T_\mathrm{s}}{2L}(1-D)</script><p>在给定的 $D$ 下，如果输出电流平均值大于等于 $I_\mathrm{LB}$，则工作在连续导通模式；如果小于 $I_\mathrm{LB}$，则工作在断续导通模式。</p>
+<h3 id="输出电压纹波脉动分析"><a href="#输出电压纹波脉动分析" class="headerlink" title="输出电压纹波脉动分析"></a>输出电压纹波脉动分析</h3><p>实际上，当电容有限时，输出电流和电压都有纹波。为了定量计算输出电压的纹波成分，我们假设负载电流为定值，此时电感电流的平均值与之相等。当电感电流大于平均值时，电容充电，反之放电。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/Buck纹波.png" alt=""></p>
+<p>电容在一个开关周期内的充电电荷为</p>
+<script type="math/tex; mode=display">\Delta Q = \frac{1}{2}\cdot \frac{\Delta I_\mathrm{L}}{2}\cdot \frac{T_\mathrm{s}}{2}</script><p>在上面，我们已经推导了 $\Delta I_\mathrm{L}=\displaystyle\frac{V_\mathrm{O}}{L}(1-D)T_\mathrm{s}$，则脉动电压为</p>
+<script type="math/tex; mode=display">\Delta V_\mathrm{O} = \frac{\Delta Q}{C} = \frac{T_\mathrm{s}}{8C}\cdot \frac{V_\mathrm{O}}{L}(1-D)T_\mathrm{s}</script><p>纹波率为</p>
+<script type="math/tex; mode=display">\frac{\Delta V_\mathrm{O}}{V_\mathrm{O}} = \frac{T_\mathrm{s}^2}{8}\cdot \frac{1-D}{LC} = \frac{\pi^2}{2}(1-D)\left(\frac{f_\mathrm{c}}{f_\mathrm{s}}\right)^2</script><p>其中，$f_\mathrm{c}=\displaystyle\frac{1}{2\pi \sqrt{LC}}$</p>
+<h2 id="升压式变换器"><a href="#升压式变换器" class="headerlink" title="升压式变换器"></a>升压式变换器</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/Boost.png" alt=""></p>
+<p>同样，Boost 变换器也有两种工作模式。这里只介绍连续导通模式。</p>
+<h3 id="连续导通模式分析-1"><a href="#连续导通模式分析-1" class="headerlink" title="连续导通模式分析"></a>连续导通模式分析</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/CCMBoost.png" alt=""></p>
+<p>在分析时，由于电容的作用，输出电压 $V_\mathrm{O}$ 可以看做是一个常数。</p>
+<p>开关导通时，电感充电，电感电流成线性上升</p>
+<script type="math/tex; mode=display">i_\mathrm{L}(t)=\frac{V_\mathrm{D}}{L}t + i_\mathrm{L}(0)</script><p>当 $t=t_\mathrm{on}$ 时，电感电流达到最大值 $i_\mathrm{L, peak}$。</p>
+<p>开关关断时，电感通过二极管放电，电感电流成线性下降</p>
+<script type="math/tex; mode=display">i_\mathrm{L}(t)= \frac{V_\mathrm{D}-V_\mathrm{O}}{L}(t-t_\mathrm{on}) + i_\mathrm{L, peak}</script><p>由伏秒平衡可以得到</p>
+<script type="math/tex; mode=display">V_\mathrm{D}t_\mathrm{on} = (V_\mathrm{O}-V_\mathrm{D})t_\mathrm{off}</script><p>化简得到</p>
+<script type="math/tex; mode=display">\frac{V_\mathrm{O}}{V_\mathrm{D}}=\frac{1}{1-D}</script><p>如果忽略功率损耗，则有</p>
+<script type="math/tex; mode=display">\frac{I_\mathrm{O}}{I_\mathrm{D}}=1-D</script><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/临界模式Boost.png" alt=""></p>
+<p>在临界模式下，电感电流平均值为</p>
+<script type="math/tex; mode=display">I_\mathrm{LB} = \frac{1}{2}i_\mathrm{L, peak} = \frac{V_\mathrm{D}}{2L}t_\mathrm{on} = \frac{T_\mathrm{s}V_\mathrm{O}}{2L}D(1-D)</script><p>电感的平均电流与输入平均电流相等，则输出电流满足</p>
+<script type="math/tex; mode=display">I_\mathrm{OB} = (1-D)I_\mathrm{LB} = \frac{V_\mathrm{O}T_\mathrm{s}}{2L}D(1-D)^2</script><p>同样，可以用不等式求出输入电流平均值或输出电流平均值最大值。</p>
+<p>在给定的 $D$ 下，如果输出电流平均值大于等于 $I_\mathrm{OB}$，则工作在连续导通模式；如果小于 $I_\mathrm{OB}$，则工作在断续导通模式。</p>
+<h3 id="输出电压纹波脉动分析-1"><a href="#输出电压纹波脉动分析-1" class="headerlink" title="输出电压纹波脉动分析"></a>输出电压纹波脉动分析</h3><p>以连续导通模式为例，输出电压纹波脉动分析与降压式变换器类似。这里我们假设在 $t_\mathrm{off}$ 末端时，二极管电流仍然大于输出平均电流 $I_\mathrm{O}$ ，否则计算会变得比较复杂。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/Boost纹波.png" alt=""></p>
+<p>在一个周期内，电容的充电电荷为</p>
+<script type="math/tex; mode=display">\Delta Q = I_\mathrm{O}DT_\mathrm{s}</script><p>纹波电压为</p>
+<script type="math/tex; mode=display">\Delta V_\mathrm{O} = \frac{\Delta Q}{C} = \frac{I_\mathrm{O}DT_\mathrm{s}}{C}</script><p>假如为纯阻性负载，则有</p>
+<script type="math/tex; mode=display">\Delta V_\mathrm{O} = \frac{V_\mathrm{O}DT_\mathrm{s}}{RC}</script><p>纹波率为</p>
+<script type="math/tex; mode=display">\frac{\Delta V_\mathrm{O}}{V_\mathrm{O}} = \frac{DT_\mathrm{s}}{RC} = \frac{DT_\mathrm{s}}{\tau}</script><p>如果 $\tau$ 比较大，那么可以忽略纹波。</p>
+<h2 id="升降压变换器"><a href="#升降压变换器" class="headerlink" title="升降压变换器"></a>升降压变换器</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/BuckBoost.png" alt=""></p>
+<p>升降压变换器的分析与前文并无什么不同，这里只给出结论。</p>
+<p>注意，升降压变换器的输出电压 $V_\mathrm{O}$ 的极性与输入电压 $V_\mathrm{D}$ 的极性相反。</p>
+<p>用伏秒平衡可以得到</p>
+<script type="math/tex; mode=display">\frac{I_\mathrm{D}}{I_\mathrm{O}}=\frac{V_\mathrm{O}}{V_\mathrm{D}}=\frac{D}{1-D}</script><p>输入电流、输出电流和电感电流平均值之间的关系为</p>
+<script type="math/tex; mode=display">I_\mathrm{O} = I_\mathrm{L} - I_\mathrm{D}</script><p>用这个关系去算临界模式导通即可。</p>
+<p>纹波分析与 Boost 变换器完全一致（实际上从输出端看就是个 Boost 变换器）。</p>
+<p>纹波电压</p>
+<script type="math/tex; mode=display">\Delta V_\mathrm{O} = \frac{I_\mathrm{O}DT_\mathrm{s}}{C} = \frac{V_\mathrm{O}DT_\mathrm{s}}{RC}</script><p>纹波率</p>
+<script type="math/tex; mode=display">\frac{\Delta V_\mathrm{O}}{V_\mathrm{O}} = \frac{DT_\mathrm{s}}{RC}</script><h2 id="Cuk-Sepic-和-Zeta-变换器"><a href="#Cuk-Sepic-和-Zeta-变换器" class="headerlink" title="Cuk, Sepic 和 Zeta 变换器"></a>Cuk, Sepic 和 Zeta 变换器</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/Cuk.png" alt=""><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/Sepic.png" alt=""><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/Zeta.png" alt=""></p>
+<p>这里面只有 Cuk 变换器的输出电压极性与输入电压相反。</p>
+<h2 id="单端正激变换器"><a href="#单端正激变换器" class="headerlink" title="单端正激变换器"></a>单端正激变换器</h2><p>Forward 变换器是在 Buck 变换器的续流二极管前增加了一个变压器，再增加一个整流二极管组成的。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/Forward.png" alt=""></p>
+<p>正激的含义：隔离变压器初级线圈连接的 MOS 管在导通时，变压器次级形成整流过程，在 MOS 管关断时进行磁复位。</p>
+<p>正激变换器有如下特点:</p>
+<ol>
+<li>变压器同名端在同一位置</li>
+<li>需要磁复位</li>
+<li>需要整流二极管</li>
+<li>输出电压极性与输入电压相同</li>
+</ol>
+<p>如果不进行磁复位，那么变压器一次侧的磁链会不断增大直到饱和，导致无法输出电压。</p>
+<p>输入电压与输出电压之间的关系为</p>
+<script type="math/tex; mode=display">\frac{V_\mathrm{O}}{V_\mathrm{D}} = \frac{N_\mathrm{2}}{N_\mathrm{1}}D</script><h2 id="单端反激变换器"><a href="#单端反激变换器" class="headerlink" title="单端反激变换器"></a>单端反激变换器</h2><p>Flyback 变换器是由 Buck-Boost 变换器插入变压器演化出来的。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/Flyback.png" alt=""></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/Flyback演化.png" alt=""></p>
+<p>反激的含义：隔离变压器初级线圈连接的 MOS 管在关断时，变压器次级形成整流过程，同时进行磁复位。</p>
+<p>反激变换器有如下特点:</p>
+<ol>
+<li>变压器同名端在不同位置</li>
+<li>不需要磁复位，但需要留出气隙防止饱和</li>
+<li>需要假负载给电容放电</li>
+<li>输出电压极性与输入电压相同</li>
+<li>效率比正激变换器低</li>
+</ol>
+<p>输入电压与输出电压之间的关系为</p>
+<script type="math/tex; mode=display">\frac{V_\mathrm{O}}{V_\mathrm{D}} = \frac{N_\mathrm{2}}{N_\mathrm{1}}\frac{D}{1-D}</script><h2 id="推挽变换器"><a href="#推挽变换器" class="headerlink" title="推挽变换器"></a>推挽变换器</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/PushPull.png" alt=""></p>
+<p>推挽变换器主要用于低电压高电流的场景。</p>
+<p>输入电压与输出电压之间的关系为</p>
+<script type="math/tex; mode=display">\frac{V_\mathrm{O}}{V_\mathrm{D}} = 2\frac{N_\mathrm{2}}{N_\mathrm{1}}D</script><h1 id="第五章-DC-AC-变换器"><a href="#第五章-DC-AC-变换器" class="headerlink" title="第五章 DC-AC 变换器"></a>第五章 DC-AC 变换器</h1><p>我们经常按照直流侧储能元件的性质将逆变器分为<strong>电压型逆变器 (VSI)</strong> 和 <strong>电流型逆变器 (CSI)</strong>。电压型逆变器的直流侧储能元件为电容，电流型逆变器的直流侧储能元件为电感。VSI 是本章的重点讨论对象。</p>
+<h2 id="SPWM-正弦波脉冲宽度调制"><a href="#SPWM-正弦波脉冲宽度调制" class="headerlink" title="SPWM 正弦波脉冲宽度调制"></a>SPWM 正弦波脉冲宽度调制</h2><p>SPWM 是用一系列脉宽按照正弦规律变换的脉冲来模拟正弦波。</p>
+<h3 id="冲量等效原理"><a href="#冲量等效原理" class="headerlink" title="冲量等效原理"></a>冲量等效原理</h3><p>当面积相等而形状不同的<strong>短</strong>脉冲作用于同一个惯性环节时，其响应基本相同。</p>
+<h3 id="SPWM-的工作原理"><a href="#SPWM-的工作原理" class="headerlink" title="SPWM 的工作原理"></a>SPWM 的工作原理</h3><p>先引入两个重要的物理量：</p>
+<p><strong>调制比</strong> (Amplitude Modulation Ratio, AMR)：</p>
+<script type="math/tex; mode=display">m_\mathrm{a} = \frac{\overline{V}_\mathrm{control}}{\overline{V}_\mathrm{tri}}</script><p>其中，$\overline{V}_\mathrm{control}$ 是调制波的幅值，$\overline{V}_\mathrm{tri}$ 是载波的幅值。</p>
+<p><strong>载波比</strong> (Frequency Modulation Ratio, FMR)：</p>
+<script type="math/tex; mode=display">m_\mathrm{f} = \frac{f_\mathrm{tri}}{f_1}</script><p>其中，$f_\mathrm{tri}$ 是载波频率，$f_1$ 是期望输出的正弦波频率。</p>
+<p>以单桥臂双极性控制为例，输出电压的基波成分为</p>
+<script type="math/tex; mode=display">v_1 = \frac{\overline{V}_\mathrm{control}\sin\omega_1 t}{\overline{V}_\mathrm{tri}}\cdot \frac{V_\mathrm{D}}{2} = m_\mathrm{a}\frac{V_\mathrm{D}}{2}\sin\omega_1 t</script><p>逆变器的电压增益都等于调制比乘以桥臂电压差，即 $m_\mathrm{a}V$ 。其中，电压差由拓扑决定。</p>
+<p>上式只在 $m_\mathrm{a} \leq 1$ 时成立。我们称 $m_\mathrm{a} \leq 1$ 时为<strong>线性调制</strong>，$m_\mathrm{a} &gt; 1$ 时为<strong>过调制</strong>。</p>
+<p>为了消除偶次谐波，在双极性调制中，我们需要控制 $m_\mathrm{f}$ 为<strong>奇数</strong>。</p>
+<h3 id="同步调制与异步调制"><a href="#同步调制与异步调制" class="headerlink" title="同步调制与异步调制"></a>同步调制与异步调制</h3><p><strong>同步调制</strong>是指调制波频率变化时，载波频率相应地变化，从而保持载波比 $m_\mathrm{f}$ 不变。<br><strong>异步调制</strong>是指调制波频率变化时，载波频率不变。</p>
+<p>同步调制可以有效抑制谐波含量，但是控制相对复杂。为此我们可以使用分段同步调制，将输出频率划分为几个频段，仅保持各个频段内载波比 $m_\mathrm{f}$ 不变。但我们大多还是使用异步调制。</p>
+<h3 id="过调制与方波调制"><a href="#过调制与方波调制" class="headerlink" title="过调制与方波调制"></a>过调制与方波调制</h3><p><strong>过调制</strong>是指调制比 $m_\mathrm{a} &gt; 1$ 的情况，此时输出电压谐波含量更大，一般用于电机驱动中。</p>
+<p>如果 $\overline{V}_\mathrm{control} \gg \overline{V}_\mathrm{tri}$ ，则输出电压近似为方波，此时称为<strong>方波调制</strong>。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/SPWM输出电压.png" alt=""></p>
+<h3 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h3><p>计算脉宽有两种方法</p>
+<p><strong>自然采样法</strong></p>
+<script type="math/tex; mode=display">t = \frac{T_\mathrm{s}}{2}\left[1+\frac{m_\mathrm{a}}{2}(\sin\omega t_\mathrm{a}+\sin\omega t_\mathrm{b})\right]</script><p><strong>规则采样法</strong></p>
+<script type="math/tex; mode=display">t = \frac{T_\mathrm{s}}{2}\left(1+m_\mathrm{a}\sin\omega t_\mathrm{d}\right)</script><h2 id="单相逆变器"><a href="#单相逆变器" class="headerlink" title="单相逆变器"></a>单相逆变器</h2><p>主要使用单相全桥逆变器，包含三种调制方式。我们只需要记得不同调制方式下，载波比 $m_\mathrm{f}$ 的取值与偶次谐波的抑制关系即可。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/单相全桥逆变器.png" alt=""></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">调制方式</th>
+<th style="text-align:center">载波比 $m_\mathrm{f}$</th>
+<th style="text-align:center">最低次谐波位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">双极性调制</td>
+<td style="text-align:center">$m_\mathrm{f}$ 取奇数</td>
+<td style="text-align:center">$m_\mathrm{f}$ 附近（含）</td>
+</tr>
+<tr>
+<td style="text-align:center">单极性调制</td>
+<td style="text-align:center">$m_\mathrm{f}$ 取偶数</td>
+<td style="text-align:center">$m_\mathrm{f}$ 附近（不含）</td>
+</tr>
+<tr>
+<td style="text-align:center">单极性倍频调制</td>
+<td style="text-align:center">$m_\mathrm{f}$ 任意</td>
+<td style="text-align:center">$2m_\mathrm{f}$ 附近（不含）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>同样，过调制和方波调制的幅值也为 1 倍和 $\displaystyle\frac{4}{\pi}$ 倍。</p>
+<h2 id="三相逆变器"><a href="#三相逆变器" class="headerlink" title="三相逆变器"></a>三相逆变器</h2><p>每一个桥臂与单相逆变器分析完全相同。但是由于每一相相差 $120^\circ$ ，所以其<strong>线电压</strong>线性调制的最大值只有 $\displaystyle\frac{\sqrt{3}}{2}\approx 0.866$ 倍，方波调制的最大值为 1.1 倍。</p>
+<h2 id="SVPWM-空间矢量脉宽调制"><a href="#SVPWM-空间矢量脉宽调制" class="headerlink" title="SVPWM 空间矢量脉宽调制"></a>SVPWM 空间矢量脉宽调制</h2><p>对一个三相逆变器，每一组桥臂都有上开下关和下开上关两种状态，分别记为 1 和 0。这样就有 $2^3=8$ 种状态，其中 000 和 111 两种状态为空矢量。我们可以将这 8 种状态看做不同的空间矢量，称为<strong>空间矢量脉宽调制</strong> (SVPWM)。</p>
+<p>通常我们使用 7 段对称调制法，步骤如下：</p>
+<ol>
+<li>计算出期望输出电压的空间矢量 $V_\mathrm{d}$ 的幅值和相位角，确定扇区</li>
+<li>将 $V_\mathrm{d}$ 分解为两个相邻的矢量 $V_\mathrm{a}$ 和 $V_\mathrm{b}$ 的线性组合</li>
+<li>计算 $V_\mathrm{a}$ 和 $V_\mathrm{b}$ 的占空比，确定矢量控制时间 $t_\mathrm{a}$ 和 $t_\mathrm{b}$</li>
+<li>计算零矢量的占空比，确定零矢量控制时间 $t_0$</li>
+<li>在一个周期内，两侧和中间分别为零矢量 000 和 111，时间为 $\frac{t_0}{4}$；中间为非零矢量开启时间，时间分别为 $\frac{t_\mathrm{a}}{2}$ 和 $\frac{t_\mathrm{b}}{2}$</li>
+</ol>
+<p>当然，在上述调制方式外，也有一些其他的调制方法，如选择性谐波消除控制、三次谐波注入控制、滞环电流控制等。</p>
+<h1 id="第六章-AC-DC-变换器"><a href="#第六章-AC-DC-变换器" class="headerlink" title="第六章 AC-DC 变换器"></a>第六章 AC-DC 变换器</h1><p>本章介绍各种整流电路。我们将会从单相整流电路开始，逐步扩展到三相整流电路；从最简单的阻性负载到复杂的感性、容性负载一步步分析。对于不控整流电路，可以看做是晶闸管整流电路导通角为 0 的特殊情况。</p>
+<h2 id="单相半波可控整流电路"><a href="#单相半波可控整流电路" class="headerlink" title="单相半波可控整流电路"></a>单相半波可控整流电路</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/单相半波可控整流电路.png" alt=""></p>
+<h3 id="阻性负载"><a href="#阻性负载" class="headerlink" title="阻性负载"></a>阻性负载</h3><p>如上图所示，晶闸管的导通角 $\alpha$ 可以通过门极电流来控制。假设晶闸管的导通角为 $\alpha$，则输出电压为</p>
+<script type="math/tex; mode=display">V_\mathrm{D} = \frac{1}{2\pi}\int_\alpha^{\pi}\sqrt{2}V_\mathrm{s}\sin\omega t\ \mathrm{d}(\omega t) = 0.45V_\mathrm{s}\frac{1+\cos\alpha}{2}</script><p>单相半波可控整流电路的一个积分周期为 $2\pi$ ，移相范围为 $[0, 180^\circ]$ 。注意，单相逆变器的控制角是从电压 0 点开始计算的，即 $0^\circ$ 。</p>
+<h2 id="三相半波可控整流电路"><a href="#三相半波可控整流电路" class="headerlink" title="三相半波可控整流电路"></a>三相半波可控整流电路</h2><h3 id="阻性负载-1"><a href="#阻性负载-1" class="headerlink" title="阻性负载"></a>阻性负载</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/三相半波可控整流电路阻性负载.png" alt=""></p>
+<p>在 $\alpha \le 30^\circ$ 时，负载电流连续，输出电压平均值为</p>
+<script type="math/tex; mode=display">V_\mathrm{D} = \frac{1}{\frac{2\pi}{3}}\int_{\frac{\pi}{6}+\alpha}^{\frac{5\pi}{6}+\alpha}\sqrt{2}V_\mathrm{s}\sin\omega t\ \mathrm{d}(\omega t) = 1.17V_\mathrm{s}\cos\alpha</script><p>在 $\alpha &gt; 30^\circ$ 时，负载电流不连续，输出电压平均值为</p>
+<script type="math/tex; mode=display">V_\mathrm{D} = \frac{1}{\frac{2\pi}{3}}\int_{\frac{\pi}{6}+\alpha}^{\pi}\sqrt{2}V_\mathrm{s}\sin\omega t\ \mathrm{d}(\omega t) = 0.675V_\mathrm{s}\left[1+\cos\left(\frac{\pi}{6}+\alpha\right)\right]</script><h3 id="阻感负载"><a href="#阻感负载" class="headerlink" title="阻感负载"></a>阻感负载</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/三相半波可控整流电路阻感负载.png" alt=""></p>
+<p>在有电感且电感足够大的情况下，电流一定会连续。这种情况我们都可以把负载看成一个电流源。因此电压平均值的计算公式与阻性负载在 $\alpha \le 30^\circ$ 时相同，即</p>
+<script type="math/tex; mode=display">V_\mathrm{D} = 1.17V_\mathrm{s}\cos\alpha</script><h3 id="反电动势负载"><a href="#反电动势负载" class="headerlink" title="反电动势负载"></a>反电动势负载</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/三相半波可控整流电路反电动势负载.png" alt=""></p>
+<p>图中为电感比较小的情况，这时需要用伏秒平衡去分析。但是一般我们认为电感比较大，即电流连续，所以输出电压平均值仍与连续是一致，即</p>
+<script type="math/tex; mode=display">V_\mathrm{D} = 1.17V_\mathrm{s}\cos\alpha</script><p>平均电流为</p>
+<script type="math/tex; mode=display">I_\mathrm{D} = \frac{V_\mathrm{D}-E_\mathrm{D}}{r}</script><p>三相半波可控整流电路触发角为 0 的点为<strong>相电压</strong>的自然换相点，此时 $\alpha=30^\circ$ ，这与单相时是不一致的。此外，三相半波可控整流电路的一个积分周期为 $\frac{2\pi}{3}$ ，阻性负载移相范围为 $[0, 150^\circ]$，阻感负载移相范围为 $[0, 90^\circ]$ 。</p>
+<h2 id="单相桥式可控整流电路"><a href="#单相桥式可控整流电路" class="headerlink" title="单相桥式可控整流电路"></a>单相桥式可控整流电路</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/单相桥式可控整流电路.png" alt=""></p>
+<h3 id="阻性负载-2"><a href="#阻性负载-2" class="headerlink" title="阻性负载"></a>阻性负载</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/单相桥式可控整流电路阻性负载.png" alt=""></p>
+<script type="math/tex; mode=display">V_\mathrm{D} = \frac{1}{\pi}\int_\alpha^{\pi}\sqrt{2}V_\mathrm{s}\sin\omega t\ \mathrm{d}(\omega t) = 0.9V_\mathrm{s}\frac{1+\cos\alpha}{2}</script><h3 id="阻感负载-1"><a href="#阻感负载-1" class="headerlink" title="阻感负载"></a>阻感负载</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/单相桥式可控整流电路阻感负载.png" alt=""></p>
+<p>在有电感且电感足够大的情况下，电流连续，输出电压平均值为</p>
+<script type="math/tex; mode=display">V_\mathrm{D} = \frac{1}{\pi}\int_\alpha^{\pi+\alpha}\sqrt{2}V_\mathrm{s}\sin\omega t\ \mathrm{d}(\omega t) = 0.9V_\mathrm{s}\cos\alpha</script><p>在不考虑换流过程的情况下，相移功率因数为 $\cos\alpha$ ，畸变因数为 0.9 。</p>
+<p>单相桥式可控整流电路的一个积分周期为 $\pi$ ，阻性负载移相范围为 $[0, 180^\circ]$ ，阻感负载移相范围为 $[0, 90^\circ]$。单相逆变器的控制角是从电压 0 点开始计算的，即 $0^\circ$ 。</p>
+<p>注意，考试可能有坑。题目会把下桥臂的两个晶闸管换成二极管，变成半控电路。此时要当做阻性负载来看；或者会在阻感负载上并联一个续流二极管，此时也要当做阻性负载来看。</p>
+<h3 id="考虑输入电感时的阻感负载"><a href="#考虑输入电感时的阻感负载" class="headerlink" title="考虑输入电感时的阻感负载"></a>考虑输入电感时的阻感负载</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/单相桥式可控整流电路带输入电感阻性负载.png" alt=""></p>
+<p>由于存在输入电感，换流过程不再是瞬间完成，这段时间称为<strong>换流时间</strong>，对应的角度称为<strong>换相重叠角</strong>，用字母 $u$ 表示。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/单相桥式可控整流电路带输入电感阻感负载工作波形.png" alt=""></p>
+<p>换流时，用积分计算电压损失面积 $A_u$</p>
+<script type="math/tex; mode=display">A_u = \int_\alpha^{\alpha+u}\sqrt{2}V_\mathrm{s}\sin\omega t\ \mathrm{d}(\omega t) = \int_\alpha^{\alpha+u}L_\mathrm{s}\frac{\mathrm{d}i_\mathrm{s}}{\mathrm{d}t}\mathrm{d}(\omega t) = \omega L_\mathrm{s} \int_{-I_\mathrm{D}}^{I_\mathrm{D}}\mathrm{d}i_\mathrm{s}</script><p>化简得到</p>
+<script type="math/tex; mode=display">A_u = \sqrt{2}V_\mathrm{s}[\cos\alpha - \cos(\alpha + u)] = 2\omega L_\mathrm{s} I_\mathrm{D}</script><p>因此，输出电压平均值为</p>
+<script type="math/tex; mode=display">V_\mathrm{D} = 0.9V_\mathrm{s}\cos\alpha - \frac{A_u}{\pi} = 0.9V_\mathrm{s}\cos\alpha - \frac{2\omega L_\mathrm{s} I_\mathrm{D}}{\pi}</script><p>换相重叠角</p>
+<script type="math/tex; mode=display">\cos(\alpha + u) = \cos\alpha - \frac{2\omega L_\mathrm{s} I_\mathrm{D}}{\sqrt{2}V_\mathrm{s}}</script><p>相移功率因数</p>
+<script type="math/tex; mode=display">DPF \approx \cos\left(\alpha + \frac{1}{2}u\right)</script><p>根据输入输出功率平衡 $V_\mathrm{s}I_\mathrm{s1}DPF=V_\mathrm{D}I_\mathrm{D}$ ，可以得到基波输入电流有效值</p>
+<script type="math/tex; mode=display">I_\mathrm{s1} = \frac{V_\mathrm{D}I_\mathrm{D}}{V_\mathrm{s}DPF} = \frac{0.9V_\mathrm{s}\cos\alpha - \frac{2\omega L_\mathrm{s} I_\mathrm{D}}{\pi}}{V_\mathrm{s}\cos\left(\alpha + \frac{1}{2}u\right)}I_\mathrm{D}</script><h3 id="逆变模式"><a href="#逆变模式" class="headerlink" title="逆变模式"></a>逆变模式</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/单相桥式可控整流电路逆变波形.png" alt=""></p>
+<p>逆变模式需要满足以下条件：</p>
+<ol>
+<li>电动势 $E_\mathrm{D}$ 反向</li>
+<li>导通角满足 $90^\circ &lt; \alpha &lt; 180^\circ$</li>
+<li>$|E_\mathrm{D}| &gt; |V_\mathrm{D}|$</li>
+</ol>
+<p>定义熄灭角</p>
+<script type="math/tex; mode=display">\gamma = \pi - (\alpha + u)</script><p>逆变角</p>
+<script type="math/tex; mode=display">\beta = \pi - \alpha</script><p>则有</p>
+<script type="math/tex; mode=display">\gamma = \beta - u</script><p>熄灭时间必须要大于晶闸管关断时间，折算成角度 $\theta$ 约为 $5^\circ$ ，再加上一个安全裕量角 $\varphi$ ，则有</p>
+<script type="math/tex; mode=display">\gamma > \theta + \varphi</script><p>即</p>
+<script type="math/tex; mode=display">\beta > u + \theta + \varphi</script><p>启动时，要在满足逆变角最小值的情况下，尽量增大导通角 $\alpha$ 使得电流断续。</p>
+<h2 id="三相桥式可控整流电路"><a href="#三相桥式可控整流电路" class="headerlink" title="三相桥式可控整流电路"></a>三相桥式可控整流电路</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/三相桥式可控整流电路.png" alt=""></p>
+<h3 id="阻性负载-3"><a href="#阻性负载-3" class="headerlink" title="阻性负载"></a>阻性负载</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/三相桥式可控整流电路阻性负载.png" alt=""></p>
+<p>在 $\alpha \le 60^\circ$ 时，负载电流连续，输出电压平均值为</p>
+<script type="math/tex; mode=display">V_\mathrm{D} = \frac{1}{\frac{\pi}{3}}\int_{\frac{\pi}{3}+\alpha}^{\frac{2\pi}{3}+\alpha}\sqrt{2}V_\mathrm{LL}\sin\omega t\ \mathrm{d}(\omega t) = 1.35V_\mathrm{LL}\cos\alpha = 2.34V_\mathrm{s}\cos\alpha</script><p>在 $\alpha &gt; 60^\circ$ 时，负载电流不连续，输出电压平均值为</p>
+<script type="math/tex; mode=display">V_\mathrm{D} = \frac{1}{\frac{\pi}{3}}\int_{\frac{\pi}{3}+\alpha}^{\pi}\sqrt{2}V_\mathrm{LL}\sin\omega t\ \mathrm{d}(\omega t) = 1.35V_\mathrm{LL}\left[1+\cos\left(\frac{\pi}{3}+\alpha\right)\right] = 2.34V_\mathrm{s}\left[1+\cos\left(\frac{\pi}{3}+\alpha\right)\right]</script><h3 id="阻感负载-2"><a href="#阻感负载-2" class="headerlink" title="阻感负载"></a>阻感负载</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/三相桥式可控整流电路阻感负载.png" alt=""></p>
+<p>在有电感且电感足够大的情况下，电流连续，输出电压平均值为</p>
+<script type="math/tex; mode=display">V_\mathrm{D} = 1.35V_\mathrm{LL}\cos\alpha = 2.34V_\mathrm{s}\cos\alpha</script><p>三相桥式可控整流电路的一个积分周期为 $\frac{\pi}{3}$ ，阻性负载移相范围为 $[0, 120^\circ]$ ，阻感负载移相范围为 $[0, 90^\circ]$。注意，三相全桥逆变器的控制角是从<strong>线电压</strong>的自然换相点开始计算的，即 $60^\circ$ 。</p>
+<h3 id="考虑输入电感时的阻感负载-1"><a href="#考虑输入电感时的阻感负载-1" class="headerlink" title="考虑输入电感时的阻感负载"></a>考虑输入电感时的阻感负载</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/PE/三相桥式可控整流电路带输入电感阻感负载工作波形.png" alt=""></p>
+<p>对图中上网孔列网孔方程，得出电压损失为 $\frac{v_\mathrm{ac}}{2}$，则电压损失面积为</p>
+<script type="math/tex; mode=display">A_u = \int_\alpha^{\alpha+u}\frac{\sqrt{2}V_\mathrm{LL}}{2}\sin\omega t\ \mathrm{d}(\omega t) = \int_\alpha^{\alpha+u}L_\mathrm{s}\frac{\mathrm{d}i_\mathrm{s}}{\mathrm{d}t}\mathrm{d}(\omega t) = \omega L_\mathrm{s} \int_{0}^{I_\mathrm{D}}\mathrm{d}i_\mathrm{s}</script><p>化简得到</p>
+<script type="math/tex; mode=display">A_u = \frac{\sqrt{2}V_\mathrm{LL}}{2}[\cos\alpha - \cos(\alpha + u)] = \omega L_\mathrm{s} I_\mathrm{D}</script><p>因此，输出电压平均值为</p>
+<script type="math/tex; mode=display">V_\mathrm{D} = 1.35V_\mathrm{LL}\cos\alpha - \frac{A_u}{\frac{\pi}{3}} = 1.35V_\mathrm{LL}\cos\alpha - \frac{3\omega L_\mathrm{s} I_\mathrm{D}}{\pi}</script><p>换相重叠角</p>
+<script type="math/tex; mode=display">\cos(\alpha + u) = \cos\alpha - \frac{2\omega L_\mathrm{s} I_\mathrm{D}}{\sqrt{2}V_\mathrm{LL}}</script><p>相移功率因数</p>
+<script type="math/tex; mode=display">DPF \approx \cos\left(\alpha + \frac{1}{2}u\right)</script><p>最后，总结一下平均电压、换相压降和换相重叠角的公式：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">电路形式</th>
+<th style="text-align:center">电流连续分界导通角</th>
+<th style="text-align:center">电流连续时平均电压</th>
+<th style="text-align:center">电流断续时平均电压</th>
+<th style="text-align:left">换相压降 $A_u$</th>
+<th style="text-align:center">换相重叠角$\cos\alpha-\cos(\alpha+u)$</th>
+<th style="text-align:center">积分周期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">单相半波 $m=2$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">$0.45V_\mathrm{s}\frac{1+\cos\alpha}{2}$</td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">$2\pi$</td>
+</tr>
+<tr>
+<td style="text-align:center">三相半波 $m=3$</td>
+<td style="text-align:center">$30^\circ$</td>
+<td style="text-align:center">$1.17V_\mathrm{s}\cos\alpha$</td>
+<td style="text-align:center">$0.675V_\mathrm{s}\left[1+\cos\left(\frac{\pi}{6}+\alpha\right)\right]$</td>
+<td style="text-align:left">$\frac{3\omega L_\mathrm{s}I_\mathrm{D}}{2\pi}$</td>
+<td style="text-align:center">$\frac{2\omega L_\mathrm{s}I_\mathrm{D}}{\sqrt{6}V_\mathrm{s}}$</td>
+<td style="text-align:center">$\frac{2\pi}{3}$</td>
+</tr>
+<tr>
+<td style="text-align:center">单相桥式 $m=2$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">$0.9V_\mathrm{s}\cos\alpha$</td>
+<td style="text-align:center">$0.9V_\mathrm{s}\frac{1+\cos\alpha}{2}$</td>
+<td style="text-align:left">$\frac{2\omega L_\mathrm{s}I_\mathrm{D}}{\pi}$</td>
+<td style="text-align:center">$\frac{2\omega L_\mathrm{s}I_\mathrm{D}}{\sqrt{2}V_\mathrm{s}}$</td>
+<td style="text-align:center">$\pi$</td>
+</tr>
+<tr>
+<td style="text-align:center">三相桥式 $m=6$</td>
+<td style="text-align:center">$60^\circ$</td>
+<td style="text-align:center">$1.35V_\mathrm{LL}\cos\alpha$</td>
+<td style="text-align:center">$1.35V_\mathrm{LL}\left[1+\cos\left(\frac{\pi}{3}+\alpha\right)\right]$</td>
+<td style="text-align:left">$\frac{3\omega L_\mathrm{s}I_\mathrm{D}}{\pi}$</td>
+<td style="text-align:center">$\frac{2\omega L_\mathrm{s}I_\mathrm{D}}{\sqrt{2}V_\mathrm{LL}}$</td>
+<td style="text-align:center">$\frac{\pi}{3}$</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>电力电子技术</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://eternallightning.github.io/posts/28ffb084.html">https://eternallightning.github.io/posts/28ffb084.html</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a"><h>作者</h><div class="post-copyright-cc-info"><h>永恒闪电</h></div></div><div class="post-copyright-c"><h>发布于</h><div class="post-copyright-cc-info"><h>2025-07-28</h></div></div><div class="post-copyright-u"><h>更新于</h><div class="post-copyright-cc-info"><h>2025-08-21</h></div></div><div class="post-copyright-c"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%94%B5%E6%B0%94%E5%B7%A5%E7%A8%8B/"><div class="tags-punctuation"><svg class="faa-tada icon" style="height:1.1em;width:1.1em;fill:currentColor;position:relative;top:2px;margin-right:3px" aria-hidden="true"><use xlink:href="#icon-sekuaibiaoqian"></use></svg></div>电气工程</a></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/83a4a9c5.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/HVT.png" onerror="onerror=null;src='/assets/r2.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">高电压技术</div></div></a></div><div class="next-post pull-right"><a href="/posts/505037a0.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/TAPS.png" onerror="onerror=null;src='/assets/r2.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">电力系统暂态分析</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/ce296272.html" title="电力系统继电保护中名词解释与重点"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-06-12</div><div class="title">电力系统继电保护中名词解释与重点</div></div></a></div><div><a href="/posts/4cc868c2.html" title="电机学"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/EM.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-08-21</div><div class="title">电机学</div></div></a></div><div><a href="/posts/5a8a6c8d.html" title="电气工程基础"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/FEE.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-08-21</div><div class="title">电气工程基础</div></div></a></div><div><a href="/posts/159a5633.html" title="模拟电子技术"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/AET.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-08-21</div><div class="title">模拟电子技术</div></div></a></div><div><a href="/posts/d56cc19f.html" title="潮流计算优化程序"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-08-21</div><div class="title">潮流计算优化程序</div></div></a></div><div><a href="/posts/505037a0.html" title="电力系统暂态分析"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/TAPS.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-08-21</div><div class="title">电力系统暂态分析</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><svg class="meta_icon" style="width:22px;height:22px;position:relative;top:5px"><use xlink:href="#icon-mulu1"></use></svg><span style="font-weight:bold">目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%BB%AA%E8%AE%BA"><span class="toc-text">第一章 绪论</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%94%B5%E5%8A%9B%E7%94%B5%E5%AD%90%E5%99%A8%E4%BB%B6"><span class="toc-text">第二章 电力电子器件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B5%E5%8A%9B%E7%94%B5%E5%AD%90%E5%99%A8%E4%BB%B6%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E7%89%B9%E5%BE%81"><span class="toc-text">电力电子器件的概念和特征</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B5%E5%8A%9B%E7%94%B5%E5%AD%90%E5%99%A8%E4%BB%B6%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-text">电力电子器件的分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B5%E5%8A%9B%E7%94%B5%E5%AD%90%E5%99%A8%E4%BB%B6%E5%9F%BA%E7%A1%80"><span class="toc-text">电力电子器件基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PN-%E7%BB%93"><span class="toc-text">PN 结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E5%8F%AF%E6%8E%A7%E5%99%A8%E4%BB%B6%E2%80%94%E2%80%94%E5%8A%9F%E7%8E%87%E4%BA%8C%E6%9E%81%E7%AE%A1"><span class="toc-text">不可控器件——功率二极管</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%E4%B8%8E%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">基本结构与工作原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E7%89%B9%E6%80%A7"><span class="toc-text">静态特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E7%89%B9%E6%80%A7"><span class="toc-text">动态特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%82%96%E7%89%B9%E5%9F%BA%E4%BA%8C%E6%9E%81%E7%AE%A1"><span class="toc-text">肖特基二极管</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E6%9E%81%E7%AE%A1%E7%9A%84%E4%B8%BB%E8%A6%81%E7%B1%BB%E5%9E%8B"><span class="toc-text">二极管的主要类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%8A%E6%8E%A7%E5%9E%8B%E5%99%A8%E4%BB%B6%E2%80%94%E2%80%94%E6%99%B6%E9%97%B8%E7%AE%A1"><span class="toc-text">半控型器件——晶闸管</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%E4%B8%8E%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86-1"><span class="toc-text">基本结构与工作原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E7%89%B9%E6%80%A7-1"><span class="toc-text">静态特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E7%89%B9%E6%80%A7-1"><span class="toc-text">动态特性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%A8%E6%8E%A7%E5%9E%8B%E5%99%A8%E4%BB%B6%E2%80%94%E2%80%94%E9%97%A8%E6%9E%81%E5%8F%AF%E5%85%B3%E6%96%AD%E6%99%B6%E9%97%B8%E7%AE%A1"><span class="toc-text">全控型器件——门极可关断晶闸管</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%E4%B8%8E%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86-2"><span class="toc-text">基本结构与工作原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%A8%E6%8E%A7%E5%9E%8B%E5%99%A8%E4%BB%B6%E2%80%94%E2%80%94%E7%94%B5%E5%8A%9B%E6%99%B6%E4%BD%93%E7%AE%A1"><span class="toc-text">全控型器件——电力晶体管</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%E4%B8%8E%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86-3"><span class="toc-text">基本结构与工作原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%A8%E6%8E%A7%E5%9E%8B%E5%99%A8%E4%BB%B6%E2%80%94%E2%80%94%E7%94%B5%E5%8A%9B%E5%9C%BA%E6%95%88%E5%BA%94%E6%99%B6%E4%BD%93%E7%AE%A1"><span class="toc-text">全控型器件——电力场效应晶体管</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%E4%B8%8E%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86-4"><span class="toc-text">基本结构与工作原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E7%89%B9%E6%80%A7-2"><span class="toc-text">动态特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E5%BE%81%E6%80%BB%E7%BB%93"><span class="toc-text">特征总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%A8%E6%8E%A7%E5%9E%8B%E5%99%A8%E4%BB%B6%E2%80%94%E2%80%94%E7%BB%9D%E7%BC%98%E6%A0%85%E5%8F%8C%E6%9E%81%E6%99%B6%E4%BD%93%E7%AE%A1"><span class="toc-text">全控型器件——绝缘栅双极晶体管</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%E4%B8%8E%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86-5"><span class="toc-text">基本结构与工作原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E7%89%B9%E6%80%A7-3"><span class="toc-text">动态特性</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86"><span class="toc-text">第三章 前置知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E6%8D%A2%E5%99%A8%E7%9A%84%E5%BC%80%E5%85%B3%E6%A8%A1%E5%BC%8F%E6%8E%A7%E5%88%B6"><span class="toc-text">变换器的开关模式控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%9E%E6%AD%A3%E5%BC%A6%E5%91%A8%E6%9C%9F%E6%B3%A2%E5%BD%A2%E5%88%86%E6%9E%90"><span class="toc-text">非正弦周期波形分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%8F%E7%A7%92%E5%B9%B3%E8%A1%A1%E4%B8%8E%E5%AE%89%E7%A7%92%E5%B9%B3%E8%A1%A1"><span class="toc-text">伏秒平衡与安秒平衡</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-DC-DC-%E5%8F%98%E6%8D%A2%E5%99%A8"><span class="toc-text">第四章 DC-DC 变换器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%8D%E5%8E%8B%E5%BC%8F%E5%8F%98%E6%8D%A2%E5%99%A8"><span class="toc-text">降压式变换器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E5%AF%BC%E9%80%9A%E6%A8%A1%E5%BC%8F%E5%88%86%E6%9E%90"><span class="toc-text">连续导通模式分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E7%94%B5%E5%8E%8B%E7%BA%B9%E6%B3%A2%E8%84%89%E5%8A%A8%E5%88%86%E6%9E%90"><span class="toc-text">输出电压纹波脉动分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%87%E5%8E%8B%E5%BC%8F%E5%8F%98%E6%8D%A2%E5%99%A8"><span class="toc-text">升压式变换器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E5%AF%BC%E9%80%9A%E6%A8%A1%E5%BC%8F%E5%88%86%E6%9E%90-1"><span class="toc-text">连续导通模式分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E7%94%B5%E5%8E%8B%E7%BA%B9%E6%B3%A2%E8%84%89%E5%8A%A8%E5%88%86%E6%9E%90-1"><span class="toc-text">输出电压纹波脉动分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%87%E9%99%8D%E5%8E%8B%E5%8F%98%E6%8D%A2%E5%99%A8"><span class="toc-text">升降压变换器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cuk-Sepic-%E5%92%8C-Zeta-%E5%8F%98%E6%8D%A2%E5%99%A8"><span class="toc-text">Cuk, Sepic 和 Zeta 变换器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E7%AB%AF%E6%AD%A3%E6%BF%80%E5%8F%98%E6%8D%A2%E5%99%A8"><span class="toc-text">单端正激变换器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E7%AB%AF%E5%8F%8D%E6%BF%80%E5%8F%98%E6%8D%A2%E5%99%A8"><span class="toc-text">单端反激变换器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A8%E6%8C%BD%E5%8F%98%E6%8D%A2%E5%99%A8"><span class="toc-text">推挽变换器</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-DC-AC-%E5%8F%98%E6%8D%A2%E5%99%A8"><span class="toc-text">第五章 DC-AC 变换器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#SPWM-%E6%AD%A3%E5%BC%A6%E6%B3%A2%E8%84%89%E5%86%B2%E5%AE%BD%E5%BA%A6%E8%B0%83%E5%88%B6"><span class="toc-text">SPWM 正弦波脉冲宽度调制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%B2%E9%87%8F%E7%AD%89%E6%95%88%E5%8E%9F%E7%90%86"><span class="toc-text">冲量等效原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPWM-%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">SPWM 的工作原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E8%B0%83%E5%88%B6%E4%B8%8E%E5%BC%82%E6%AD%A5%E8%B0%83%E5%88%B6"><span class="toc-text">同步调制与异步调制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%87%E8%B0%83%E5%88%B6%E4%B8%8E%E6%96%B9%E6%B3%A2%E8%B0%83%E5%88%B6"><span class="toc-text">过调制与方波调制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="toc-text">具体实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E7%9B%B8%E9%80%86%E5%8F%98%E5%99%A8"><span class="toc-text">单相逆变器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E7%9B%B8%E9%80%86%E5%8F%98%E5%99%A8"><span class="toc-text">三相逆变器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SVPWM-%E7%A9%BA%E9%97%B4%E7%9F%A2%E9%87%8F%E8%84%89%E5%AE%BD%E8%B0%83%E5%88%B6"><span class="toc-text">SVPWM 空间矢量脉宽调制</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-AC-DC-%E5%8F%98%E6%8D%A2%E5%99%A8"><span class="toc-text">第六章 AC-DC 变换器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E7%9B%B8%E5%8D%8A%E6%B3%A2%E5%8F%AF%E6%8E%A7%E6%95%B4%E6%B5%81%E7%94%B5%E8%B7%AF"><span class="toc-text">单相半波可控整流电路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BB%E6%80%A7%E8%B4%9F%E8%BD%BD"><span class="toc-text">阻性负载</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E7%9B%B8%E5%8D%8A%E6%B3%A2%E5%8F%AF%E6%8E%A7%E6%95%B4%E6%B5%81%E7%94%B5%E8%B7%AF"><span class="toc-text">三相半波可控整流电路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BB%E6%80%A7%E8%B4%9F%E8%BD%BD-1"><span class="toc-text">阻性负载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BB%E6%84%9F%E8%B4%9F%E8%BD%BD"><span class="toc-text">阻感负载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E7%94%B5%E5%8A%A8%E5%8A%BF%E8%B4%9F%E8%BD%BD"><span class="toc-text">反电动势负载</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E7%9B%B8%E6%A1%A5%E5%BC%8F%E5%8F%AF%E6%8E%A7%E6%95%B4%E6%B5%81%E7%94%B5%E8%B7%AF"><span class="toc-text">单相桥式可控整流电路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BB%E6%80%A7%E8%B4%9F%E8%BD%BD-2"><span class="toc-text">阻性负载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BB%E6%84%9F%E8%B4%9F%E8%BD%BD-1"><span class="toc-text">阻感负载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%80%83%E8%99%91%E8%BE%93%E5%85%A5%E7%94%B5%E6%84%9F%E6%97%B6%E7%9A%84%E9%98%BB%E6%84%9F%E8%B4%9F%E8%BD%BD"><span class="toc-text">考虑输入电感时的阻感负载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%86%E5%8F%98%E6%A8%A1%E5%BC%8F"><span class="toc-text">逆变模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E7%9B%B8%E6%A1%A5%E5%BC%8F%E5%8F%AF%E6%8E%A7%E6%95%B4%E6%B5%81%E7%94%B5%E8%B7%AF"><span class="toc-text">三相桥式可控整流电路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BB%E6%80%A7%E8%B4%9F%E8%BD%BD-3"><span class="toc-text">阻性负载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BB%E6%84%9F%E8%B4%9F%E8%BD%BD-2"><span class="toc-text">阻感负载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%80%83%E8%99%91%E8%BE%93%E5%85%A5%E7%94%B5%E6%84%9F%E6%97%B6%E7%9A%84%E9%98%BB%E6%84%9F%E8%B4%9F%E8%BD%BD-1"><span class="toc-text">考虑输入电感时的阻感负载</span></a></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-color: transparent;"><div id="footer-wrap"><div id="ft"><div class="ft-item-1"><div class="t-top"><div class="t-t-l"><p class="ft-t t-l-t">格言🧬</p><div class="bg-ad"><div>愿你前行的道路有群星闪耀，愿你留下的足迹有百花绽放。你即是上帝的馈赠，世界因你而瑰丽。</div><div class="btn-xz-box"><a class="btn-xz" target="_blank" rel="noopener" href="https://sr.mihoyo.com/">点击开启星辰之旅</a></div></div></div><div class="t-t-r"><p class="ft-t t-l-t">猜你想看💡</p><ul class="ft-links"><li><a target="_blank" rel="noopener" href="https://www.fomal.cc/posts/eec9786.html">魔改指南</a><a href="/box/nav/">网址导航</a></li><li><a href="/social/link/">我的朋友</a><a href="/comments/">留点什么</a></li><li><a href="/personal/about/">关于作者</a><a href="/archives/">文章归档</a></li><li><a href="/categories/">文章分类</a><a href="/tags/">文章标签</a></li><li><a href="/box/Gallery/">我的画廊</a><a href="/personal/bb/">我的唠叨</a></li><li><a href="/site/time/">建设进程</a><a href="/site/census/">网站统计</a></li></ul></div></div></div><div class="ft-item-2"><p class="ft-t">推荐链接⌛</p><div class="ft-img-group"><div class="img-group-item"><a target="_blank" rel="noopener" href="https://www.fomal.cc/" title="Fomalhaut🥝"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/img/avatar.webp" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://blog.fanovian.cc/" title="Fanovian"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://note.fanovian.cc/assets/images/icon-boy-circle-transparent.png" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://qcwwn.cn/" title="Qcwwn"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic1.imgdb.cn/item/67c45df3d0e0a243d40a2b22.jpg" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div></div></div></div><div class="copyright"><span><b>&copy;2025</b></span><span><b>&nbsp;&nbsp;By 永恒闪电</b></span></div><div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v6.3.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Frame-Hexo-blue.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v4.3.1"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Theme-Butterfly-6513df.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用多线部署，主线路托管于Vercel"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Hosted-Vercel-brightgreen.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://user.51.la/" style="margin-inline:5px" title="本站数据分析得益于51la技术支持"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Analytics-51la-3db1eb.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://icp.gov.moe/?keyword=20226665" style="margin-inline:5px" title="本站已加入萌ICP豪华套餐，萌ICP备20226665号"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/萌ICP备-20226665-fe1384.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://bitiful.dogecast.com/buckets" style="margin-inline:5px" title="本网站经Service Worker分流至缤纷云对象存储"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src=" https://sourcebucket.s3.ladydaily.com/badge/Bucket-缤纷云-9c62da.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://www.netdun.net/" style="margin-inline:5px" title="本站使用网盾星球提供CDN加速与防护"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/CDN-网盾星球-fff2cc.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本网站源码由Github提供存储仓库"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src=" https://sourcebucket.s3.ladydaily.com/badge/Source-Github-d021d6.svg" alt=""/></a></p></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button><button class="share" type="button" title="右键模式" onclick="changeMouseMode()"><i class="fas fa-mouse"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog right_side"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button class="share" type="button" title="分享链接" onclick="share()"><i class="fas fa-share-nodes"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i><span id="percent">0<span>%</span></span></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-arrow-down"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div class="js-pjax" id="rightMenu"><div class="rightMenu-group rightMenu-small"><a class="rightMenu-item" href="javascript:window.history.back();"><i class="fa fa-arrow-left"></i></a><a class="rightMenu-item" href="javascript:window.history.forward();"><i class="fa fa-arrow-right"></i></a><a class="rightMenu-item" href="javascript:window.location.reload();"><i class="fa fa-refresh"></i></a><a class="rightMenu-item" href="javascript:rmf.scrollToTop();"><i class="fa fa-arrow-up"></i></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-text"><a class="rightMenu-item" href="javascript:rmf.copySelect();"><i class="fa fa-copy"></i><span>复制</span></a><a class="rightMenu-item" href="javascript:window.open(&quot;https://www.baidu.com/s?wd=&quot;+window.getSelection().toString());window.location.reload();"><i class="fa fa-search"></i><span>百度搜索</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-too"><a class="rightMenu-item" href="javascript:window.open(window.getSelection().toString());window.location.reload();"><i class="fa fa-link"></i><span>转到链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-paste"><a class="rightMenu-item" href="javascript:rmf.paste()"><i class="fa fa-copy"></i><span>粘贴</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-post"><a class="rightMenu-item" href="#post-comment"><i class="fas fa-comment"></i><span>空降评论</span></a><a class="rightMenu-item" href="javascript:rmf.copyWordsLink()"><i class="fa fa-link"></i><span>复制本文地址</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-to"><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>新窗口打开</span></a><a class="rightMenu-item" id="menu-too" href="javascript:rmf.open()"><i class="fa fa-link"></i><span>转到链接</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-img"><a class="rightMenu-item" href="javascript:rmf.saveAs()"><i class="fa fa-download"></i><span>保存图片</span></a><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>在新窗口打开</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制图片链接</span></a></div><div class="rightMenu-group rightMenu-line"><a class="rightMenu-item" href="javascript:randomPost()"><i class="fa fa-paper-plane"></i><span>随便逛逛</span></a><a class="rightMenu-item" href="javascript:switchNightMode();"><i class="fa fa-moon"></i><span>昼夜切换</span></a><a class="rightMenu-item" href="javascript:rmf.switchReadMode();"><i class="fa fa-book"></i><span>阅读模式</span></a><a class="rightMenu-item" href="/personal/about/"><i class="fa fa-info-circle"></i><span>关于博客</span></a><a class="rightMenu-item" href="javascript:toggleWinbox();"><i class="fas fa-cog"></i><span>美化设置</span></a><a class="rightMenu-item" href="javascript:rmf.fullScreen();"><i class="fas fa-expand"></i><span>切换全屏</span></a><a class="rightMenu-item" href="javascript:window.print();"><i class="fa-solid fa-print"></i><span>打印页面</span></a></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.umd.min.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/instant.page/5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script><script src="/js/search/local-search.js"></script><script async="async">var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())
+setTimeout(function(){preloader.endLoading();}, 5000);
+document.getElementById('loading-box').addEventListener('click',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: '',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: '',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.staticfile.org/twikoo/1.6.8/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script><script async src="https://cdn1.tianli0.top/npm/vue@2.6.14/dist/vue.min.js"></script><script async src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script><script async src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script><script defer type="text/javascript" src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script><script async src="//npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><script defer src="https://cdn1.tianli0.top/gh/nextapps-de/winbox/dist/winbox.bundle.min.js"></script><script async src="//at.alicdn.com/t/c/font_3586335_hsivh70x0fm.js"></script><script async src="//at.alicdn.com/t/c/font_3636804_gr02jmjr3y9.js"></script><script async src="//at.alicdn.com/t/c/font_3612150_kfv55xn3u2g.js"></script><script async src="https://cdn.wpon.cn/2022-sucai/Gold-ingot.js"></script><canvas id="universe"></canvas><canvas id="snow"></canvas><script defer src="/js/fomal.js"></script><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn1.tianli0.top/npm/js-heo@1.0.12/metingjs/Meting.min.js"></script><script src="https://lib.baomitu.com/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show","#web_bg",".js-pjax","#bibi","body > title","#app","#tag-echarts","#posts-echart","#categories-echarts"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://EternalLightning.github.io/categories/学习生活/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">⚡ 电气工程课程与研究 (8)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item" style="visibility: hidden"></div><div class="magnet_item" style="visibility: hidden"></div><a class="magnet_link_more"  href="https://EternalLightning.github.io/categories/" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
+    console.log('已挂载magnet')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(33.333333333333336% - 5px);background: #e9e9e9;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: var(--text-bg-hover)}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
+    <style></style><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/83a4a9c5.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/HVT.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-08-21</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/83a4a9c5.html&quot;);" href="javascript:void(0);" alt="">高电压技术</a><div class="blog-slider__text">高电压技术复习总结</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/83a4a9c5.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/28ffb084.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/PE.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-07-28</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/28ffb084.html&quot;);" href="javascript:void(0);" alt="">电力电子技术</a><div class="blog-slider__text">电力电子技术复习总结</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/28ffb084.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/505037a0.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/TAPS.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-07-21</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/505037a0.html&quot;);" href="javascript:void(0);" alt="">电力系统暂态分析</a><div class="blog-slider__text">电力系统暂态分析复习总结</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/505037a0.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/5a8a6c8d.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/FEE.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-07-14</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/5a8a6c8d.html&quot;);" href="javascript:void(0);" alt="">电气工程基础</a><div class="blog-slider__text">电气工程基础复习总结</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/5a8a6c8d.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/4cc868c2.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/EM.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-06-24</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/4cc868c2.html&quot;);" href="javascript:void(0);" alt="">电机学</a><div class="blog-slider__text">电机学复习总结</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/4cc868c2.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/159a5633.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/AET.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-06-12</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/159a5633.html&quot;);" href="javascript:void(0);" alt="">模拟电子技术</a><div class="blog-slider__text">模拟电子技术复习总结</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/159a5633.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/ce296272.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-05-28</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/ce296272.html&quot;);" href="javascript:void(0);" alt="">电力系统继电保护中名词解释与重点</a><div class="blog-slider__text">电力系统继电保护中的部分名词解释与部分重要内容的汇总</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/ce296272.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/d56cc19f.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-02-10</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/d56cc19f.html&quot;);" href="javascript:void(0);" alt="">潮流计算优化程序</a><div class="blog-slider__text">本人参加育才计划时，编写的潮流计算程序</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/d56cc19f.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><script data-pjax src="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+  function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('gitZone');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 320px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+      }
+
+    if( document.getElementById('gitZone') && (location.pathname ==='/site/census/'|| '/site/census/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("/api?null",['#d9e0df', '#c6e0dc', '#a8dcd4', '#9adcd2', '#89ded1', '#77e0d0', '#5fdecb', '#47dcc6', '#39dcc3', '#1fdabe', '#00dab9'],'null')
+    }
+  </script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script></div><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><!-- hexo injector body_end end --></body></html>

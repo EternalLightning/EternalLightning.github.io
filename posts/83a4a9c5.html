@@ -1,0 +1,757 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><div id="myscoll"></div><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>高电压技术 | 永恒闪电⚡的博客</title><meta name="keywords" content="电气工程"><meta name="author" content="永恒闪电"><meta name="copyright" content="永恒闪电"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="高电压技术复习总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高电压技术">
+<meta property="og:url" content="https://eternallightning.github.io/posts/83a4a9c5.html">
+<meta property="og:site_name" content="永恒闪电⚡的博客">
+<meta property="og:description" content="高电压技术复习总结">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://eternallightning.github.io/assets/cover/HVT.png">
+<meta property="article:published_time" content="2025-08-21T09:08:31.000Z">
+<meta property="article:modified_time" content="2025-08-24T08:37:06.784Z">
+<meta property="article:author" content="永恒闪电">
+<meta property="article:tag" content="电气工程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://eternallightning.github.io/assets/cover/HVT.png"><link rel="shortcut icon" href="/"><link rel="canonical" href="https://eternallightning.github.io/posts/83a4a9c5"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.7.2/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"这篇文章已经有","messageNext":"天未更新了，内容可能过时！"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.js',
+      css: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '高电压技术',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-08-24 16:37:06'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css"><style id="themeColor"></style><style id="rightSide"></style><style id="transPercent"></style><style id="blurNum"></style><style id="settingStyle"></style><span id="fps"></span><style id="defineBg"></style><style id="menu_shadow"></style><svg aria-hidden="true" style="position:absolute; overflow:hidden; width:0; height:0"><symbol id="icon-sun" viewBox="0 0 1024 1024"><path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path></symbol><symbol id="icon-moon" viewBox="0 0 1024 1024"><path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path></symbol></svg><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="永恒闪电⚡的博客" type="application/atom+xml">
+</head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/head.jpg" onerror="onerror=null;src='/assets/r1.png'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-home"></use></svg><span class="menu_word" style="font-size:17px"> 首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--article"></use></svg><span class="menu_word" style="font-size:17px"> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guidang1">                   </use></svg><span class="menu_word" style="font-size:17px"> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-sekuaibiaoqian">                   </use></svg><span class="menu_word" style="font-size:17px"> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-fenlei">                   </use></svg><span class="menu_word" style="font-size:17px"> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pinweishenghuo"></use></svg><span class="menu_word" style="font-size:17px"> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/life/music/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-yinle">                   </use></svg><span class="menu_word" style="font-size:17px"> 八音盒</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/movies/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-dianying1">                   </use></svg><span class="menu_word" style="font-size:17px"> 影院</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/games/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-youxishoubing">                   </use></svg><span class="menu_word" style="font-size:17px"> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xiangzi"></use></svg><span class="menu_word" style="font-size:17px"> 八宝箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/box/gallery/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-tubiaozhizuomoban">                   </use></svg><span class="menu_word" style="font-size:17px"> 画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/animation/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-nvwumao">                   </use></svg><span class="menu_word" style="font-size:17px"> 动画</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/nav/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-zhifengche">                   </use></svg><span class="menu_word" style="font-size:17px"> 网址导航</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shejiaoxinxi"></use></svg><span class="menu_word" style="font-size:17px"> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/social/fcircle/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pengyouquan">                   </use></svg><span class="menu_word" style="font-size:17px"> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-liuyan">                   </use></svg><span class="menu_word" style="font-size:17px"> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/social/link/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-lianjie">                   </use></svg><span class="menu_word" style="font-size:17px"> 友人帐</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-wangye"></use></svg><span class="menu_word" style="font-size:17px"> 网站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/site/census/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--tongjibiao">                   </use></svg><span class="menu_word" style="font-size:17px"> 网站统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/echarts/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shujutongji1">                   </use></svg><span class="menu_word" style="font-size:17px"> 文章统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/time/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xianxingshalou">                   </use></svg><span class="menu_word" style="font-size:17px"> 旧时光</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-maoliang"></use></svg><span class="menu_word" style="font-size:17px"> 个人</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/personal/bb/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-qunliaotian">                   </use></svg><span class="menu_word" style="font-size:17px"> 唠叨</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/love/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-love-sign">                   </use></svg><span class="menu_word" style="font-size:17px"> 恋爱小屋</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/about/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-paperplane">                   </use></svg><span class="menu_word" style="font-size:17px"> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">永恒闪电⚡的博客</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-home"></use></svg><span class="menu_word" style="font-size:17px"> 首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--article"></use></svg><span class="menu_word" style="font-size:17px"> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guidang1">                   </use></svg><span class="menu_word" style="font-size:17px"> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-sekuaibiaoqian">                   </use></svg><span class="menu_word" style="font-size:17px"> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-fenlei">                   </use></svg><span class="menu_word" style="font-size:17px"> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pinweishenghuo"></use></svg><span class="menu_word" style="font-size:17px"> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/life/music/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-yinle">                   </use></svg><span class="menu_word" style="font-size:17px"> 八音盒</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/movies/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-dianying1">                   </use></svg><span class="menu_word" style="font-size:17px"> 影院</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/games/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-youxishoubing">                   </use></svg><span class="menu_word" style="font-size:17px"> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xiangzi"></use></svg><span class="menu_word" style="font-size:17px"> 八宝箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/box/gallery/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-tubiaozhizuomoban">                   </use></svg><span class="menu_word" style="font-size:17px"> 画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/animation/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-nvwumao">                   </use></svg><span class="menu_word" style="font-size:17px"> 动画</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/nav/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-zhifengche">                   </use></svg><span class="menu_word" style="font-size:17px"> 网址导航</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shejiaoxinxi"></use></svg><span class="menu_word" style="font-size:17px"> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/social/fcircle/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pengyouquan">                   </use></svg><span class="menu_word" style="font-size:17px"> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-liuyan">                   </use></svg><span class="menu_word" style="font-size:17px"> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/social/link/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-lianjie">                   </use></svg><span class="menu_word" style="font-size:17px"> 友人帐</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-wangye"></use></svg><span class="menu_word" style="font-size:17px"> 网站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/site/census/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--tongjibiao">                   </use></svg><span class="menu_word" style="font-size:17px"> 网站统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/echarts/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shujutongji1">                   </use></svg><span class="menu_word" style="font-size:17px"> 文章统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/time/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xianxingshalou">                   </use></svg><span class="menu_word" style="font-size:17px"> 旧时光</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-maoliang"></use></svg><span class="menu_word" style="font-size:17px"> 个人</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/personal/bb/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-qunliaotian">                   </use></svg><span class="menu_word" style="font-size:17px"> 唠叨</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/love/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-love-sign">                   </use></svg><span class="menu_word" style="font-size:17px"> 恋爱小屋</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/about/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-paperplane">                   </use></svg><span class="menu_word" style="font-size:17px"> 关于</span></a></li></ul></div></div><center id="name-container"><a id="page-name" href="javascript:scrollToTop()">PAGE_NAME</a></center><div id="nav-right"><div id="search-button"><a class="search faa-parent animated-hover" title="检索站内任何你想要的信息"><svg class="faa-tada icon" style="height:24px;width:24px;fill:currentColor;position:relative;top:6px" aria-hidden="true"><use xlink:href="#icon-valentine_-search-love-find-heart"></use></svg><span> 搜索</span></a></div><a class="meihua faa-parent animated-hover" onclick="toggleWinbox()" title="美化设置-自定义你的风格" id="meihua-button"><svg class="faa-tada icon" style="height:26px;width:26px;fill:currentColor;position:relative;top:8px" aria-hidden="true"><use xlink:href="#icon-tupian1"></use></svg></a><a class="sun_moon faa-parent animated-hover" onclick="switchNightMode()" title="浅色和深色模式转换" id="nightmode-button"><svg class="faa-tada" style="height:25px;width:25px;fill:currentColor;position:relative;top:7px" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon">       </use></svg></a><div id="toggle-menu"><a><i class="fas fa-bars fa-fw"></i></a></div></div></div></nav><div id="post-info"><h1 class="post-title">高电压技术</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><svg class="meta_icon post-meta-icon" style="width:30px;height:30px;position:relative;top:10px"><use xlink:href="#icon-rili"></use></svg><span class="post-meta-label">发表于 </span><time class="post-meta-date-created" datetime="2025-08-21T09:08:31.000Z" title="发表于 2025-08-21 17:08:31">2025-08-21</time><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:18px;height:18px;position:relative;top:5px"><use xlink:href="#icon-gengxin1"></use></svg><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-08-24T08:37:06.784Z" title="更新于 2025-08-24 16:37:06">2025-08-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:18px;height:18px;position:relative;top:5px"><use xlink:href="#icon-biaoqian"></use></svg><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%94%9F%E6%B4%BB/">学习生活</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><svg class="meta_icon post-meta-icon" style="width:25px;height:25px;position:relative;top:8px"><use xlink:href="#icon-charuword"></use></svg><span class="post-meta-label">字数总计:</span><span class="word-count">6815</span><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:20px;height:20px;position:relative;top:5px"><use xlink:href="#icon-shizhong"></use></svg><span class="post-meta-label">阅读时长:</span><span>21分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="高电压技术"><svg class="meta_icon post-meta-icon" style="width:25px;height:25px;position:relative;top:5px"><use xlink:href="#icon-eye"></use></svg><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="均匀电场中的放电"><a href="#均匀电场中的放电" class="headerlink" title="均匀电场中的放电"></a>均匀电场中的放电</h1><h2 id="电介质"><a href="#电介质" class="headerlink" title="电介质"></a>电介质</h2><p>电介质常用作绝缘材料。</p>
+<p>电介质的分类：</p>
+<ol>
+<li>按物质形态分<ul>
+<li>固体</li>
+<li>液体</li>
+<li>气体<br>气体在击穿后有完全的绝缘自恢复特性。</li>
+</ul>
+</li>
+<li>按在电气设备中所处的位置分<ul>
+<li>外绝缘：一般由气体（空气、SF6等）和固体（绝缘子、绝缘套管等）联合构成</li>
+<li>内绝缘：一般由液体（油、变压器油等）和固体（绝缘纸、绝缘板等）联合构成</li>
+</ul>
+</li>
+</ol>
+<p>电介质在电场作用下出现的现象：</p>
+<ul>
+<li>弱电场：极化、电导、介质损耗</li>
+<li>强电场：放电、闪络、击穿</li>
+</ul>
+<p>击穿：同一绝缘介质内部发生的贯穿性放电。<br>闪络：沿两种绝缘介质界面发生的自持放电（沿面放电发展到贯穿性的空气击穿）。</p>
+<p>气体介质在纯净、中性状态下不导电。</p>
+<h2 id="带电粒子"><a href="#带电粒子" class="headerlink" title="带电粒子"></a>带电粒子</h2><h3 id="带电粒子的产生"><a href="#带电粒子的产生" class="headerlink" title="带电粒子的产生"></a>带电粒子的产生</h3><p>原子的激励与电离</p>
+<ul>
+<li>激励：原子吸收能量后，电子跃迁到更高的能级，但仍在原子核的束缚范围内。 $W_\mathrm{e}$ 为激励能。</li>
+<li>电离：原子吸收足够的能量后，电子完全脱离原子核的束缚，形成自由电子和正离子。 $W_\mathrm{i}$ 为电离能。</li>
+</ul>
+<p>气体电离的四种形式</p>
+<ul>
+<li>光电离：光子能量大于或等于气体分子电离能时，光子与气体分子相互作用，导致电子脱离，即 $h\nu &gt; W_\mathrm{i}$ 。</li>
+<li>热电离：气体分子在高温下获得足够的动能，克服束缚能量，电子脱离原子核。温度一般满足 $T &gt; 10^4\ \mathrm{K}$。</li>
+<li>电子碰撞电离：<strong>气体中产生带电粒子最重要的方式</strong>，主要由电子完成。自由电子与气体分子碰撞，能量足够时使分子电离。提高外加电压会使碰撞电离的概率增大。</li>
+<li>电极表面电离：正离子撞击阴极表面，使表面原子电离，释放出电子。主要包括光电效应、阴极射线、热电子发射和强场发射。</li>
+</ul>
+<h3 id="带电粒子在气体中的运动"><a href="#带电粒子在气体中的运动" class="headerlink" title="带电粒子在气体中的运动"></a>带电粒子在气体中的运动</h3><ol>
+<li><p>自由行程长度</p>
+<p> 自由行程长度：两次碰撞间走过的距离。</p>
+<p> 平均自由行程长度：单位行程中，碰撞次数的倒数 $\lambda$ 。</p>
+<p> 实际的自由行程长度是一个随机量，有很大的分散性。粒子的自由行程长度大于等于某一距离 $x$ 的概率为</p>
+<script type="math/tex; mode=display">P(S>x) = e^{-\frac{x}{\lambda}}</script><p> 由气体动力学可知，电子的平均自由行程长度为</p>
+<script type="math/tex; mode=display">\lambda = \frac{1}{\pi r^2 N}</script><p> 其中，$r$ 为气体分子半径，$N$ 为气体分子密度。</p>
+</li>
+<li><p>带电粒子的迁移率</p>
+<p> 迁移率 $k$ 表示带电粒子在单位场强的作用下沿电场方向的漂移速度。</p>
+<script type="math/tex; mode=display">k = \frac{v}{E}</script></li>
+<li><p>带电粒子的扩散</p>
+<p> 压强越小，温度越高，气体扩散越快。</p>
+<p> 电子热运动速度快，自由行程长度大，扩散远快于离子。</p>
+</li>
+</ol>
+<h3 id="带电粒子的消失"><a href="#带电粒子的消失" class="headerlink" title="带电粒子的消失"></a>带电粒子的消失</h3><p>主要包括：在电极上形成电流、扩散逸出气体放电空间、复合和附着形成负离子。</p>
+<h2 id="放电"><a href="#放电" class="headerlink" title="放电"></a>放电</h2><h3 id="汤逊气体放电理论"><a href="#汤逊气体放电理论" class="headerlink" title="汤逊气体放电理论"></a>汤逊气体放电理论</h3><ol>
+<li><p>电子崩 （$\alpha$ 过程）</p>
+<p> <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/HVT/电子崩示意图.png" alt=""></p>
+<p> 电子崩是指在电场作用下，电子与气体分子碰撞，产生新的自由电子和正离子。这个过程是放电的起始阶段，属于空间电离。</p>
+<p> 在高气压和高真空下，气体具有较高的电气强度。</p>
+<p> 电子崩从阴极开始，电子向阳极运动、正离子向阴极运动。因此崩头为电子，崩尾为正离子。</p>
+<p> 电子碰撞电离系数 $\alpha$ ：一个电子沿电场方向运动 1 cm 的行程中所完成的碰撞次数平均值。</p>
+</li>
+<li><p>自持放电 （$\gamma$ 过程）</p>
+<p> 自持放电属于表面电离。</p>
+<p> 正离子表面电离系数 $\gamma$ ：一个正离子碰撞阴极产生表面电离的电子数。</p>
+<p> 自持放电的条件是 $\gamma (\mathrm{e}^{\alpha d} - 1) \geq 1$，其中 $d$ 为极间距离。</p>
+</li>
+</ol>
+<p>所以，汤逊气体放电理论认为，初崩的正离子轰击阴极，产生新的电子和正离子，不断循环直到击穿。该理论的适用条件为<strong>均匀电场内、低气压、短间隙</strong>。</p>
+<h3 id="击穿电压与巴申理论"><a href="#击穿电压与巴申理论" class="headerlink" title="击穿电压与巴申理论"></a>击穿电压与巴申理论</h3><p>在均匀电场中，气体放电的击穿电压 $U_\mathrm{b}=$ 自持放电电压 $U_0$ 。</p>
+<p>巴申理论认为，气体放电的击穿电压与极间距离和气压有关。即</p>
+<script type="math/tex; mode=display">U_\mathrm{b} = f(pd)</script><p>该曲线呈一弯钩型，$pd$ 很大或很小时，击穿电压都会提高。这是因为在气压很小时碰撞总数少，在气压很大时电子自由行程小。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/HVT/巴申曲线.png" alt=""></p>
+<p>巴申定理是在温度不变的情况下得出的。在温度非恒定时，引入气体相对密度 $\delta = \frac{pT_0}{p_0T}$，则击穿电压满足</p>
+<script type="math/tex; mode=display">U_\mathrm{b} = f(\delta d)</script><h3 id="流注理论"><a href="#流注理论" class="headerlink" title="流注理论"></a>流注理论</h3><p>流注理论是对汤逊气体放电理论的修正，适用于高气压和长间隙。其考虑了空间电荷对原电场的作用和空间光电离的作用。</p>
+<ol>
+<li><p>发展过程</p>
+<p> 发展过程主要分四个阶段。</p>
+<p> 第一阶段为空间电荷畸变了外电场。电子崩头部聚集了大量正负粒子，产生了电场畸变。电场增强部分利于激励，削弱部分利于复合。强烈的复合产生大量光子，成为空间光电离辐射源。</p>
+<p> <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/HVT/电场畸变.png" alt=""></p>
+<p> 第二阶段为二次电子崩（光电离）。</p>
+<p> 第三阶段为形成正流柱和负流柱。</p>
+<p> <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/HVT/电子崩到流柱.png" alt=""></p>
+</li>
+<li><p>主要特征</p>
+<p> 特点：电离强度大，传播速度快</p>
+<p> 出现流柱的条件也就是自持放电条件。数值上满足 $\mathrm{e}^{\alpha d} \approx10^8$ 或 $\alpha d \approx 20$ 。</p>
+</li>
+<li><p>适用条件</p>
+<p> 可以用于解释<strong>高气压和长间隙</strong>的放电现象。</p>
+</li>
+<li><p>正负流柱的区分</p>
+<p> 正流柱：初崩到阳极，再产生流柱，等离子通道从阳极生长到阴极。<br> 负流注：初崩未到阳极就产生流柱，等离子通道从阴极或中途生长到阳极。</p>
+</li>
+</ol>
+<h1 id="不均匀电场中的放电"><a href="#不均匀电场中的放电" class="headerlink" title="不均匀电场中的放电"></a>不均匀电场中的放电</h1><p>不均匀电场中的放电与均匀电场中的放电的区别在于，均匀电场中一旦自持放电就会击穿，而不均匀电场中会出现稳定的自持放电但没有击穿的现象。</p>
+<p>先引入电场不均匀系数</p>
+<script type="math/tex; mode=display">f=\frac{E_\mathrm{max}}{E_\mathrm{av}}</script><p>其中，$E_\mathrm{max}$ 为电场最大值，$E_\mathrm{av}$ 为电场平均值，满足</p>
+<script type="math/tex; mode=display">E_\mathrm{av} = \frac{U}{d}</script><p>在 $1\leq f<2$ 时，放电特征与均匀电场相似。在 $f>4$ 时，场强大的空间先发生电晕放电，击穿电压比 $1\leq f&lt;2$ 时的情况小。</p>
+<h2 id="电晕放电"><a href="#电晕放电" class="headerlink" title="电晕放电"></a>电晕放电</h2><p>对于一段导线，其电晕起始场强满足</p>
+<script type="math/tex; mode=display">E_\mathrm{c} = 30m\delta\left(1+\frac{0.3}{\sqrt{r\delta}}\right)</script><p>其中，电晕起始场强 $E_\mathrm{c}$ 单位为 kV/cm ，$m$ 为导线表面粗糙系数，$r$ 为导线半径，$\delta$ 为空气相对密度。</p>
+<p>使用分裂导线可以减轻电晕放电。</p>
+<p>电晕放电会导致：电晕损耗（雨雾天气大增），无线电干扰，可闻噪声等。</p>
+<h2 id="极不均匀场放电的极性效应"><a href="#极不均匀场放电的极性效应" class="headerlink" title="极不均匀场放电的极性效应"></a>极不均匀场放电的极性效应</h2><p>两个原则：几何形状不同时，极性取决于曲率半径小的；几何形状相同时，极性取决于不接地的。</p>
+<p>我们以“棒——板”气隙（小于 1 m）为例，来说明极性效应。</p>
+<h3 id="正极为棒"><a href="#正极为棒" class="headerlink" title="正极为棒"></a>正极为棒</h3><p>不容易电晕放电，但是起晕后击穿电压低。</p>
+<p>电子崩头部的电子达到棒极后就被中和，留下了许多正离子。而正离子运动比较慢，这会削弱棒极附近的电场强度，使得电晕起始电压偏高。但是，正离子会加强粒子群后外部空间的电场。当电压进一步提高，随着电晕放电区的扩展，强场区会向板极方向推进，放电的发展是顺利的，因此击穿电压较低。</p>
+<h3 id="负极为棒"><a href="#负极为棒" class="headerlink" title="负极为棒"></a>负极为棒</h3><p>容易电晕放电，但是起晕后击穿电压高。</p>
+<p>电子崩将由棒极向板极发展。由于电子速度快，棒极头部将会停留大量正离子，会加强朝向棒极端的电场强度，使得电晕起始电压偏低。但是，电子群会削弱粒子群后外部空间的电场，电晕不容易向外扩展，因此击穿电压较高。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/HVT/棒板电场.png" alt=""></p>
+<p>也因此，交流电的击穿都在<strong>正半周</strong>。</p>
+<h2 id="长间隙极不均匀场的放电"><a href="#长间隙极不均匀场的放电" class="headerlink" title="长间隙极不均匀场的放电"></a>长间隙极不均匀场的放电</h2><p>经历三个阶段：电晕放电——先导放电——主放电。</p>
+<p>热电离在后两个阶段有重要的作用。</p>
+<p>先导放电就是指出现“先导通道”的放电，先导通道以热游离电子的出现作为标志。</p>
+<h1 id="放电时间、冲击电压和沿面放电"><a href="#放电时间、冲击电压和沿面放电" class="headerlink" title="放电时间、冲击电压和沿面放电"></a>放电时间、冲击电压和沿面放电</h1><h2 id="放电时间"><a href="#放电时间" class="headerlink" title="放电时间"></a>放电时间</h2><p>放电时间的组成包括：</p>
+<ul>
+<li>$t_\mathrm{l}$: 电压从零上升到击穿电压 $U_\mathrm{s}$ 所需的时间</li>
+<li>$t_\mathrm{s}$: 在 $t_\mathrm{l}$ 时间后，出现第一个有效电子的时间</li>
+<li>$t_\mathrm{f}$: 在 $t_\mathrm{s}$ 时间后到击穿所需的时间</li>
+</ul>
+<p>总时间 $t_\mathrm{b} = t_\mathrm{l} + t_\mathrm{s} + t_\mathrm{f}$ ，放电时延 $t_\mathrm{lag} = t_\mathrm{s} + t_\mathrm{f}$ 。这两个时间都具有统计性，外加电压越高，$t_\mathrm{b}$ 和 $t_\mathrm{lag}$ 越小。</p>
+<h2 id="标准冲击电压"><a href="#标准冲击电压" class="headerlink" title="标准冲击电压"></a>标准冲击电压</h2><p>标准冲击电压包括标准雷电冲击电压波、标准雷电截波、标准操作电压冲击波。这些波形均可用冲击电压发生器产生。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/HVT/标准雷电.png" alt=""></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/HVT/标准操作冲击.png" alt=""></p>
+<p>50% 冲击击穿电压 $U_{50\%}$ 是指在标准冲击电压作用下，气隙击穿的概率为 50% 时的击穿电压。</p>
+<p>冲击系数 $\beta = \frac{U_{50\%}}{U_\mathrm{s}}$ ，其中 $U_\mathrm{s}$ 为静态击穿电压。在 $f<2$ 时，$\beta\approx 1$ ；在 $f>4$ 时，$\beta&gt;1$ 。</p>
+<p>伏秒特性曲线的求取：保持冲击电压的波形不变，逐渐提高冲击电压的峰值。如果在电压下降时击穿则取峰值，在电压上升时击穿则取当前值，最后将这些点连成线即可。放电时间具有分散性，实际上的“曲线”为一个带状区域，我们取区域的 50% 线作为伏秒特性曲线。</p>
+<p>若要设备 S1 能够可靠保护设备 S2，S1 的伏秒特性曲线应全面低于 S2 的伏秒特性曲线，以保证 S1 能被首先击穿。</p>
+<h2 id="沿面放电"><a href="#沿面放电" class="headerlink" title="沿面放电"></a>沿面放电</h2><p>沿面放电是指在两个绝缘体的界面上发生的放电现象。沿面闪络电压比气体或固体单独存在时的击穿电压都低。</p>
+<p>沿面放电的影响因素：</p>
+<ol>
+<li>固体绝缘材料特性：取决于材料的亲水性/憎水性</li>
+<li>介质粗糙程度</li>
+<li>固体介质与电极间的气隙大小</li>
+<li>固体表面电场分布</li>
+</ol>
+<p>套管属于有强垂直分量的极不均匀电场，支柱绝缘子属于有弱垂直分量的极不均匀电场。</p>
+<p>表面电阻：每单位平方面积电介质表面对正方形的相对两边间表面泄露电流所产生的电阻。</p>
+<p>滑闪放电的特征：介质表面放电通道中发生热电离。</p>
+<p>闪络分类：</p>
+<ol>
+<li>干闪：雷电冲击、操作冲击、运行电压都能引起</li>
+<li>湿闪：操作电压、运行电压引起</li>
+<li>污闪：运行电压就可引起</li>
+</ol>
+<p>沿面放电电压低于气隙击穿电压的原因：</p>
+<ol>
+<li>固体介质与电极间的缝隙会放电，畸变电场</li>
+<li>大气水分在介质表面形成水膜，水膜中的粒子沿介质移动到电极，畸变电场</li>
+<li>介质表面粗糙不均匀，表面电阻分散性大</li>
+</ol>
+<p>减少沿面放电的方法：</p>
+<ol>
+<li>接触面喷导电粉末</li>
+<li>介质使用憎水性材料</li>
+<li>改良材料</li>
+</ol>
+<p>污闪过程四个阶段：积污——受潮——干区形成——局部电弧</p>
+<p>污秽度评定：等值盐密法，单位 mg/cm² ，每平方厘米的污秽溶于水的电导等效氯化钠毫克数。</p>
+<p>减少污闪的方法：</p>
+<ol>
+<li>设计时增大爬电比距</li>
+<li>定期清理</li>
+<li>涂憎水材料</li>
+<li>改良材料</li>
+</ol>
+<h1 id="介质的击穿特性"><a href="#介质的击穿特性" class="headerlink" title="介质的击穿特性"></a>介质的击穿特性</h1><p>电介质的电气特性包括：导电性能、介电性能、电气强度。</p>
+<p>电介质的主要参数：电导率 $\sigma$ 、介电常数 $\varepsilon$ 、介质损耗角正切 $\tan\delta$ 和击穿场强。</p>
+<h2 id="气体介质的电气特性"><a href="#气体介质的电气特性" class="headerlink" title="气体介质的电气特性"></a>气体介质的电气特性</h2><p>电气强度通常以击穿电压或击穿场强来表示。</p>
+<p>气隙的电气强度首先取决于电场形式（均匀或不均匀），其次与外加电压的形式（工频交流电压、直流电压、雷电过电压波、操作过电压波）有关。工频交流电压和直流电压统称为稳态电压。</p>
+<p>气隙在稳态电压作用下的击穿电压即为静态击穿电压。</p>
+<p>空气的击穿场强约为 30 kV/cm 。</p>
+<p>均匀电场空气间隙击穿电压可用如下经验公式来计算</p>
+<script type="math/tex; mode=display">U_\mathrm{b} = 24.55\delta d+6.66\sqrt{\delta d}</script><p>其中，$U_\mathrm{b}$ 为击穿电压峰值，单位为 kV ；$d$ 为极间距离，单位为 cm ；$\delta$ 为空气相对密度。</p>
+<p>完成气隙击穿的三个条件：</p>
+<ol>
+<li>足够大的电压或场强</li>
+<li>存在能引起电子崩并导致流柱的有效电子</li>
+<li>需要一定时间（微秒级别）</li>
+</ol>
+<p>细线效应：导线直径小到一定程度后，击穿电压随着直径的减小而增大。</p>
+<p>提高电气强度的方法：</p>
+<ol>
+<li>改善电极形状</li>
+<li>利用空间电荷改善电场分布</li>
+<li>采用屏障（正极性效果好，负极性会适得其反）</li>
+<li>采用高气压或高真空</li>
+<li>用高电气强度气体</li>
+</ol>
+<h2 id="液体与固体介质的电气特性"><a href="#液体与固体介质的电气特性" class="headerlink" title="液体与固体介质的电气特性"></a>液体与固体介质的电气特性</h2><p>液体和固体介质的电气强度高于空气。</p>
+<h3 id="电介质的极化"><a href="#电介质的极化" class="headerlink" title="电介质的极化"></a>电介质的极化</h3><p>介质介电常数越大，电介质极性越强，分为极性电介质、中性电介质；也跟温度和频率有关。</p>
+<p>工频交流和冲击电压下，串联多层介质中的电场强度分布与介质相对介电常数成反比。</p>
+<p>介质极化的分类：电子式、离子式、偶极子式、夹层和空间电荷极化。</p>
+<ul>
+<li>电子式：存在于一切介质中，时间短，弹性位移，无能量损耗，温度的影响不大。</li>
+<li>离子式：时间短，弹性位移，无能量损耗，温度的影响不大。</li>
+<li>偶极子式：存在于极性分子中，时间较长，非弹性位移，有能量损耗，电场、温度的影响较大。</li>
+<li>夹层介质界面极化：存在于多层介质中，暂态过程中电容略大。极化时，界面引起吸收电荷，电荷积聚的电流称为位移电流。有损耗，但只有在直流或低频下才明显。</li>
+<li>空间电荷极化：时间从几秒到几十分钟不等，非弹性位移，有能量损耗，负温度系数。</li>
+</ul>
+<h3 id="电介质的电导"><a href="#电介质的电导" class="headerlink" title="电介质的电导"></a>电介质的电导</h3><p>介质不是理想绝缘的，总会有带电粒子或空穴，在电场作用下形成传导电流（电导电流、泄漏电流）。极性电介质的电阻率要小得多。</p>
+<script type="math/tex; mode=display">
+\text{电介质电导}
+\begin{cases}
+\text{离子电导}
+\begin{cases}
+\text{本征离子电导（极性电介质）} \\
+\\
+\text{杂质离子电导（中性电介质）}
+\end{cases} \\
+\\
+\text{电子电导}
+\end{cases}</script><p>液体电介质的电导来源于离子电导和电泳电导。</p>
+<p>固体电介质的体积电导来源于电极中逸出的电子、介质中的离子、传到电子、空穴等。</p>
+<p>固体电介质的表面电导来源于介质表面的污物。</p>
+<h3 id="电介质的能量损耗"><a href="#电介质的能量损耗" class="headerlink" title="电介质的能量损耗"></a>电介质的能量损耗</h3><p>电介质的能量损耗分为由电导引起的损耗和由极化引起的损耗。通过介质损耗可以判断绝缘材料的质量和状态。</p>
+<p>直流电压下，损耗仅由电导引起，用体积电导和表面电导表示。交流电压下，损耗由电导和周期性极化引起，用介质损耗表示。</p>
+<p>介质功率损耗</p>
+<script type="math/tex; mode=display">P=UI\cos\varphi=UI_{\scriptscriptstyle\mathrm{R}}=UI_{\scriptscriptstyle\mathrm{C}}\tan\delta=U^2\omega C_\mathrm{p}\tan\delta</script><p>其中，$\delta$ 为介质损耗角。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/HVT/介质损耗角.png" alt=""></p>
+<p>有损介质等效电路：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/HVT/有损介质等效电路.png" alt=""></p>
+<p>图中，$C_1$ 为几何尺寸决定的电容与无损极化电容之和，$C_2$ 为有损极化电容，$R_2$ 为极化过程损耗电阻，$R_3$ 为泄漏电阻。</p>
+<p>并联等值电路：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/HVT/并联等值电路.png" alt=""></p>
+<script type="math/tex; mode=display">\tan\delta = \frac{I_{\scriptscriptstyle\mathrm{R}}}{I_{\scriptscriptstyle\mathrm{C}}}=\frac{\frac{U}{R}}{\omega C_\mathrm{p}U}=\frac{1}{\omega C_\mathrm{p}R}</script><p>串联等值电路：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/HVT/串联等值电路.png" alt=""></p>
+<script type="math/tex; mode=display">\tan\delta = \frac{Ir}{\frac{I}{\omega C_\mathrm{s}}}=\omega C_\mathrm{s}r</script><p>气体介质的损耗一般发生在固体、液体中含有气泡的场合。</p>
+<p>液体介质的损耗：</p>
+<ul>
+<li>中性、弱极性介质主要在电导上损耗</li>
+<li>极性介质包括电导和极化损耗（与温度和频率有关）</li>
+</ul>
+<p>固体介质的损耗：</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+\text{分子式结构介质}
+\begin{cases}
+\text{中性：损耗由电导引起，损耗小} \\
+\\
+\text{极性：损耗大}
+\end{cases} \\
+\\
+\text{离子式结构介质：与结构特性有关}\\
+\\
+\text{不均匀结构介质：与结构特性有关}\\
+\\
+\text{强介电介质：在高压设备中极少使用}
+\end{cases}</script><h3 id="液体介质的击穿"><a href="#液体介质的击穿" class="headerlink" title="液体介质的击穿"></a>液体介质的击穿</h3><p>耐电强度一般高于气体，有绝缘、冷却、灭弧等作用。液体介质的击穿场强一般为 100-200 kV/cm 。</p>
+<p>液体介质的击穿理论包括：</p>
+<ul>
+<li>电击穿理论和气泡击穿理论：纯净液体电介质</li>
+<li>小桥击穿理论：非纯净液体电介质</li>
+</ul>
+<p>电击穿理论主要包括四个过程：电离——流柱——放电通道出现分支——贯穿间隙。类似于长间隙气体放电。</p>
+<p>气泡击穿理论认为，液体中存在气泡，气泡中的气体电离升温，产生更多的气泡，气泡最终堆积成小桥，导致击穿。</p>
+<p>小桥击穿理论认为，液体中存在杂质颗粒，杂质容易被极化，形成小桥，泄漏电流增大，产生更多气泡，导致击穿。液体中的杂质处于溶解或者悬浮状态。</p>
+<p>对于变压器油：</p>
+<ul>
+<li>潮湿的油：水从悬浮到溶解，击穿电压上升；温度升高，水分汽化，击穿电压下降。</li>
+<li>干燥的油：温度升高，击穿电压下降。</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/HVT/变压器油.png" alt=""></p>
+<p>变压器油击穿电压的影响因素：</p>
+<ol>
+<li>水分和其他杂质</li>
+<li>油温</li>
+<li>电场均匀度</li>
+<li>电压作用时间</li>
+<li>油压</li>
+</ol>
+<h3 id="固体介质的击穿"><a href="#固体介质的击穿" class="headerlink" title="固体介质的击穿"></a>固体介质的击穿</h3><p>固体介质的耐电强度最高，击穿最复杂，是击穿后唯一不可恢复的绝缘材料。固体介质的击穿场强一般为 $10^4-10^7$ kV/cm 。</p>
+<p>固体介质的击穿类型：电击穿、热击穿和电化学击穿。</p>
+<p>电击穿以碰撞电离为基础。传导电子碰撞晶格，使得晶格原子电离，产生更多电子，形成电子崩，形成导电通道，导致击穿。特点是电压作用时间短，击穿电压高，温度不高；击穿场强与频率密切相关，与温度几乎无关，约为热击穿的 100 倍。</p>
+<p>热击穿是介质的热不稳定性造成的。</p>
+<p>电化学击穿是由于内部缺陷引起的局部放电长期作用，使得绝缘水平下降。这是因为放电产生的活性气体有氧化和腐蚀作用，此外放电产生的带电粒子撞击介质产热，有可能破坏介质分子。特征是树枝状放电，主要见于有机材料。</p>
+<p>固体介质击穿的影响因素：</p>
+<ol>
+<li>电压作用时间：时间短为电击穿，时间长为热击穿</li>
+<li>电场均匀程度：击穿电压和厚度近似成正比</li>
+<li>温度：低温为电击穿，高温为热击穿</li>
+<li>受潮</li>
+<li>累积效应：局部损伤会缓慢积累</li>
+</ol>
+<script type="math/tex; mode=display">
+\begin{cases}
+ \text{气体}\begin{cases}
+ \text{气体放电的基本过程}\begin{cases}
+ \text{气体放电理论：汤逊气体放电理论，流注理论}\\
+\\
+ \text{不均匀电场中的放电过程：电晕放电，极性效应}\\
+\\
+ \text{放电时间和冲击电压下的气隙击穿：放电时间，伏秒特性，冲击电压标准化等}\\
+\\
+\text{沿面放电：滑闪、污闪的作用机理}
+\end{cases}\\
+\text{气体介质的电气强度}
+\end{cases}\\
+\left.\begin{matrix}
+\text{固体}\\
+\\
+\text{液体}
+\end{matrix}\right\} 极化，电导，损耗和击穿
+\end{cases}</script><h1 id="电气设备绝缘试验"><a href="#电气设备绝缘试验" class="headerlink" title="电气设备绝缘试验"></a>电气设备绝缘试验</h1><p>电力设备的可靠性与绝缘材料、绝缘结构和电气强度密切相关。绝缘材料和绝缘结构是薄弱环节，是导致事故的主要原因。</p>
+<p>电介质理论不完善，必须依靠绝缘试验来保证设备的绝缘水平。</p>
+<ul>
+<li>非破坏性试验：可以检测除了电气强度之外的性能，电压比较低</li>
+<li>破坏性试验：主要检测电气强度，电压较高</li>
+</ul>
+<p>变压器相关的实验：型式试验，出厂试验，现场试验，特殊试验。</p>
+<p>绝缘预防性试验的目的：发现绝缘缺陷，防止事故发生。缺陷是在设备制造过程和运行过程中的外部因素导致的。</p>
+<h2 id="绝缘的老化"><a href="#绝缘的老化" class="headerlink" title="绝缘的老化"></a>绝缘的老化</h2><p>电气设备的使用寿命一般取决于绝缘的使用寿命，其与老化过程密切相关。</p>
+<h3 id="热老化"><a href="#热老化" class="headerlink" title="热老化"></a>热老化</h3><p>高温时，介质会快速老化；温度不太高但是时间长也会加速老化。</p>
+<p>8 度法则：对于 A 级的油纸绝缘，工作温度超过规定值（$105 ^\circ\mathrm{C}$）$8 ^\circ\mathrm{C}$ 时，寿命缩短约一半。</p>
+<p>固体介质热老化的过程：固体受热导致热运动加剧，产生更多载流子，损耗增大，温度升高，形成恶性循环，最终导致击穿。</p>
+<p>液体介质热老化的过程（油的氧化）：每增高 10 度，油的氧化速度加快一倍。油在 115-120 度时开始裂解。</p>
+<h3 id="电老化"><a href="#电老化" class="headerlink" title="电老化"></a>电老化</h3><p>在高电压或强电场作用下的老化，主要原因是介质中有局部放电。</p>
+<h3 id="机械老化"><a href="#机械老化" class="headerlink" title="机械老化"></a>机械老化</h3><p>机械应力的作用，可能会让绝缘产生裂缝。</p>
+<h2 id="绝缘电阻、吸收比和泄漏电流的测量"><a href="#绝缘电阻、吸收比和泄漏电流的测量" class="headerlink" title="绝缘电阻、吸收比和泄漏电流的测量"></a>绝缘电阻、吸收比和泄漏电流的测量</h2><p>绝缘电阻 $R$ ：绝缘体两端加上直流电压 $U$ 后，与流过绝缘体的泄漏电流 $I$ 的比值。</p>
+<p>吸收比：电流衰减过程中两个瞬间（15s 和 60s）测得的两个电阻值之比，恒大于 1 。吸收比越大，绝缘性能越好。</p>
+<p>介质损耗角正切：反映了绝缘的整体性缺陷或小电容试品的严重局部缺陷。</p>
+<p>测量介质损耗角的影响因素：外界电磁场、温度、试验电压、试品电容量、试品表面泄露。</p>
+<h3 id="局部放电检测"><a href="#局部放电检测" class="headerlink" title="局部放电检测"></a>局部放电检测</h3><p>局部放电检测是绝缘预防性试验的重要内容之一，包括视在放电量 $q$ 、放电重复率、局部放电起始电压 $U_\mathrm{s}$ 和熄灭电压 $U_\mathrm{r}$ 。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/HVT/局部放电检测.png" alt=""></p>
+<p>如图，假如固体或液体中存在气泡或气隙，$C_\mathrm{g}$ 为气隙的电容，$C_\mathrm{b}$ 为与气隙串联的介质电容，$C_\mathrm{a}$ 为其余完好部分的介质电容。</p>
+<p>放电时间在微秒到纳秒级，每次放电，电压瞬时下降 $U_\mathrm{s} - U_\mathrm{r}$ ，真实放电量 $q_\mathrm{r} \approx (C_\mathrm{g}+C_\mathrm{b})(U_\mathrm{s} - U_\mathrm{r})$ ，视在放电量 $q = \frac{C_\mathrm{b}}{C_\mathrm{g}+C_\mathrm{b}}q_\mathrm{r}$ 。</p>
+<p>其他检测方法有</p>
+<ul>
+<li>非电方法：噪声检测法、光检测法、化学检测法</li>
+<li>电方法：脉冲电流法、介质损耗法</li>
+</ul>
+<h1 id="电力系统过电压"><a href="#电力系统过电压" class="headerlink" title="电力系统过电压"></a>电力系统过电压</h1><h2 id="过电压的分类"><a href="#过电压的分类" class="headerlink" title="过电压的分类"></a>过电压的分类</h2><ul>
+<li>内部过电压<ul>
+<li>暂时过电压：工频电压升高、谐振过电压</li>
+<li>操作过电压</li>
+</ul>
+</li>
+<li>雷电过电压<ul>
+<li>直接雷击过电压</li>
+<li>感应雷击过电压</li>
+</ul>
+</li>
+</ul>
+<h2 id="无损波过程"><a href="#无损波过程" class="headerlink" title="无损波过程"></a>无损波过程</h2><p>波阻抗 </p>
+<script type="math/tex; mode=display">Z=\sqrt{\displaystyle\frac{L}{C}}</script><p>波速</p>
+<script type="math/tex; mode=display">v=\frac{1}{\sqrt{LC}}</script><p>其中 $L$ 为单位长度的电感，$C$ 为单位长度的电容。</p>
+<h3 id="输电线中的波"><a href="#输电线中的波" class="headerlink" title="输电线中的波"></a>输电线中的波</h3><p>对于一根很长的输电线，电场不能认为是瞬间建立的，而是以波的形式沿线传播。电压波和电流波都是前向行波和反向行波的叠加。</p>
+<p>记 $u’$ 和 $i’$ 分别为前向行波的电压和电流，$u’’$ 和 $i’’$ 分别为反向行波的电压和电流，则</p>
+<script type="math/tex; mode=display">u = u' + u'' \qquad i = i' + i''</script><script type="math/tex; mode=display">\frac{u'}{i'} = Z \qquad \frac{u''}{i''} = -Z</script><h3 id="输电线的折射与反射"><a href="#输电线的折射与反射" class="headerlink" title="输电线的折射与反射"></a>输电线的折射与反射</h3><p>过电压波在线路均匀性发生改变时的反射和折射：</p>
+<ul>
+<li>折射系数：$\alpha=\frac{2Z_2}{Z_1+Z_2}$</li>
+<li>反射系数：$\beta\frac{Z_2-Z_1}{Z_1+Z_2}$</li>
+</ul>
+<p>二者的关系是 $1+\beta=\alpha$ 。</p>
+<p>特殊的情况：</p>
+<ul>
+<li>开路端：$Z_2 = \infty$ ，$\alpha=2$ ，$\beta=1$ ，电压翻倍，电流为零</li>
+<li>短路端：$Z_2 = 0$ ，$\alpha=0$ ，$\beta=-1$ ，电压为零，电流翻倍</li>
+</ul>
+<h3 id="彼得逊法则"><a href="#彼得逊法则" class="headerlink" title="彼得逊法则"></a>彼得逊法则</h3><p>对于一个节点 A，假设波从一条分布参数线路传到节点 A ，并且节点 A 后连接的全部是集中参数电路（不考虑反行波），那么我们可以把线路的阻抗作为集中参数阻抗，电压波的幅值加倍，便可使用电路理论的知识计算节点 A 的电压波和电流波。</p>
+<p>波穿过电感：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/HVT/波穿过电感.png" alt=""></p>
+<p>应用彼得逊法则，作出等值电路图。用 KVL 列出</p>
+<script type="math/tex; mode=display">2u_1'=i_2'(Z_1+Z_2)+L\frac{\mathrm{d}i_2'}{\mathrm{d}t}</script><p>用拉普拉斯变换解出来</p>
+<script type="math/tex; mode=display">i_2'=\frac{2u_1'}{Z_1+Z_2}(1-\mathrm{e}^{-\frac{t}{\tau_{\scriptscriptstyle\mathrm{L}}}})</script><script type="math/tex; mode=display">u_2' = i_2'Z_2 = \frac{2Z_2}{Z_1+Z_2}u_1'(1-\mathrm{e}^{-\frac{t}{\tau_{\scriptscriptstyle\mathrm{L}}}})=\alpha u_1'(1-\mathrm{e}^{-\frac{t}{\tau_{\scriptscriptstyle\mathrm{L}}}})</script><p>其中，$ \tau_{\scriptscriptstyle\mathrm{L}} = \frac{L}{Z_1+Z_2} $ 为回路的时间常数，$\alpha = \frac{2Z_2}{Z_1+Z_2}$ 为没有电感时的电压折射系数。</p>
+<p>波前陡度为</p>
+<script type="math/tex; mode=display">a=\frac{\mathrm{d}u_2'}{\mathrm{d}t}\bigg|_{t=0} = \frac{2Z_2}{Z_1+Z_2}\frac{u_1'}{\tau_{\scriptscriptstyle\mathrm{L}}} = \frac{2Z_2u_1'}{L}</script><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/HVT/波穿过电感的折反射.png" alt=""></p>
+<p>电流反射波用 $i_1’’=i_2’-i_1’$ 计算即可，电压反射波用 $u_1’’=-Z_1i_1’’$ 计算即可。</p>
+<p>波旁过电容：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/HVT/波旁过电容.png" alt=""></p>
+<p>应用彼得逊法则，作出等值电路图。列出方程</p>
+<script type="math/tex; mode=display">2u_1' = (i_{\scriptscriptstyle\mathrm{C}}+i_2')Z_1 + i_2'Z_2 = (Z_1+Z_2)i_2' + CZ_1Z_2\frac{\mathrm{d}i_2'}{\mathrm{d}t}</script><p>用拉普拉斯变换解出来</p>
+<script type="math/tex; mode=display">i_2' = \frac{2u_1'}{Z_1+Z_2}(1-\mathrm{e}^{-\frac{t}{\tau_{\scriptscriptstyle\mathrm{C}}}})</script><script type="math/tex; mode=display">u_2' = i_2'Z_2 = \frac{2Z_2}{Z_1+Z_2}u_1'(1-\mathrm{e}^{-\frac{t}{\tau_{\scriptscriptstyle\mathrm{C}}}})=\alpha u_1'(1-\mathrm{e}^{-\frac{t}{\tau_{\scriptscriptstyle\mathrm{C}}}})</script><p>其中，$\tau_{\scriptscriptstyle\mathrm{C}} = \frac{Z_1Z_2}{Z_1+Z_2}C$ 为回路的时间常数，$\alpha = \frac{2Z_2}{Z_1+Z_2}$ 为没有电容时的电压折射系数。</p>
+<p>波前陡度为</p>
+<script type="math/tex; mode=display">a=\frac{\mathrm{d}u_2'}{\mathrm{d}t}\bigg|_{t=0} = \frac{2Z_2}{Z_1+Z_2}\frac{u_1'}{\tau_{\scriptscriptstyle\mathrm{C}}} = \frac{2u_1'}{Z_1C}</script><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/HVT/波旁过电容的折反射.png" alt=""></p>
+<p>电压反射波用 $u_1’’=u_2’-u_1’$ 计算即可，电流反射波用 $i_1’’=-\displaystyle\frac{u_1’’}{Z_1}$ 计算即可。</p>
+</article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>高电压技术</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://eternallightning.github.io/posts/83a4a9c5.html">https://eternallightning.github.io/posts/83a4a9c5.html</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a"><h>作者</h><div class="post-copyright-cc-info"><h>永恒闪电</h></div></div><div class="post-copyright-c"><h>发布于</h><div class="post-copyright-cc-info"><h>2025-08-21</h></div></div><div class="post-copyright-u"><h>更新于</h><div class="post-copyright-cc-info"><h>2025-08-24</h></div></div><div class="post-copyright-c"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%94%B5%E6%B0%94%E5%B7%A5%E7%A8%8B/"><div class="tags-punctuation"><svg class="faa-tada icon" style="height:1.1em;width:1.1em;fill:currentColor;position:relative;top:2px;margin-right:3px" aria-hidden="true"><use xlink:href="#icon-sekuaibiaoqian"></use></svg></div>电气工程</a></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/28ffb084.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/PE.png" onerror="onerror=null;src='/assets/r2.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">电力电子技术</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/ce296272.html" title="电力系统继电保护中名词解释与重点"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-06-12</div><div class="title">电力系统继电保护中名词解释与重点</div></div></a></div><div><a href="/posts/4cc868c2.html" title="电机学"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/EM.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-08-21</div><div class="title">电机学</div></div></a></div><div><a href="/posts/5a8a6c8d.html" title="电气工程基础"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/FEE.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-08-21</div><div class="title">电气工程基础</div></div></a></div><div><a href="/posts/159a5633.html" title="模拟电子技术"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/AET.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-08-21</div><div class="title">模拟电子技术</div></div></a></div><div><a href="/posts/d56cc19f.html" title="潮流计算优化程序"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-08-21</div><div class="title">潮流计算优化程序</div></div></a></div><div><a href="/posts/505037a0.html" title="电力系统暂态分析"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/TAPS.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-08-21</div><div class="title">电力系统暂态分析</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><svg class="meta_icon" style="width:22px;height:22px;position:relative;top:5px"><use xlink:href="#icon-mulu1"></use></svg><span style="font-weight:bold">目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9D%87%E5%8C%80%E7%94%B5%E5%9C%BA%E4%B8%AD%E7%9A%84%E6%94%BE%E7%94%B5"><span class="toc-text">均匀电场中的放电</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B5%E4%BB%8B%E8%B4%A8"><span class="toc-text">电介质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%A6%E7%94%B5%E7%B2%92%E5%AD%90"><span class="toc-text">带电粒子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%A6%E7%94%B5%E7%B2%92%E5%AD%90%E7%9A%84%E4%BA%A7%E7%94%9F"><span class="toc-text">带电粒子的产生</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%A6%E7%94%B5%E7%B2%92%E5%AD%90%E5%9C%A8%E6%B0%94%E4%BD%93%E4%B8%AD%E7%9A%84%E8%BF%90%E5%8A%A8"><span class="toc-text">带电粒子在气体中的运动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%A6%E7%94%B5%E7%B2%92%E5%AD%90%E7%9A%84%E6%B6%88%E5%A4%B1"><span class="toc-text">带电粒子的消失</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%BE%E7%94%B5"><span class="toc-text">放电</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B1%A4%E9%80%8A%E6%B0%94%E4%BD%93%E6%94%BE%E7%94%B5%E7%90%86%E8%AE%BA"><span class="toc-text">汤逊气体放电理论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BB%E7%A9%BF%E7%94%B5%E5%8E%8B%E4%B8%8E%E5%B7%B4%E7%94%B3%E7%90%86%E8%AE%BA"><span class="toc-text">击穿电压与巴申理论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E6%B3%A8%E7%90%86%E8%AE%BA"><span class="toc-text">流注理论</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8D%E5%9D%87%E5%8C%80%E7%94%B5%E5%9C%BA%E4%B8%AD%E7%9A%84%E6%94%BE%E7%94%B5"><span class="toc-text">不均匀电场中的放电</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B5%E6%99%95%E6%94%BE%E7%94%B5"><span class="toc-text">电晕放电</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%81%E4%B8%8D%E5%9D%87%E5%8C%80%E5%9C%BA%E6%94%BE%E7%94%B5%E7%9A%84%E6%9E%81%E6%80%A7%E6%95%88%E5%BA%94"><span class="toc-text">极不均匀场放电的极性效应</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E6%9E%81%E4%B8%BA%E6%A3%92"><span class="toc-text">正极为棒</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%9F%E6%9E%81%E4%B8%BA%E6%A3%92"><span class="toc-text">负极为棒</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%95%BF%E9%97%B4%E9%9A%99%E6%9E%81%E4%B8%8D%E5%9D%87%E5%8C%80%E5%9C%BA%E7%9A%84%E6%94%BE%E7%94%B5"><span class="toc-text">长间隙极不均匀场的放电</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%94%BE%E7%94%B5%E6%97%B6%E9%97%B4%E3%80%81%E5%86%B2%E5%87%BB%E7%94%B5%E5%8E%8B%E5%92%8C%E6%B2%BF%E9%9D%A2%E6%94%BE%E7%94%B5"><span class="toc-text">放电时间、冲击电压和沿面放电</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%BE%E7%94%B5%E6%97%B6%E9%97%B4"><span class="toc-text">放电时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E5%86%B2%E5%87%BB%E7%94%B5%E5%8E%8B"><span class="toc-text">标准冲击电压</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B2%BF%E9%9D%A2%E6%94%BE%E7%94%B5"><span class="toc-text">沿面放电</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E8%B4%A8%E7%9A%84%E5%87%BB%E7%A9%BF%E7%89%B9%E6%80%A7"><span class="toc-text">介质的击穿特性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B0%94%E4%BD%93%E4%BB%8B%E8%B4%A8%E7%9A%84%E7%94%B5%E6%B0%94%E7%89%B9%E6%80%A7"><span class="toc-text">气体介质的电气特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B6%B2%E4%BD%93%E4%B8%8E%E5%9B%BA%E4%BD%93%E4%BB%8B%E8%B4%A8%E7%9A%84%E7%94%B5%E6%B0%94%E7%89%B9%E6%80%A7"><span class="toc-text">液体与固体介质的电气特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B5%E4%BB%8B%E8%B4%A8%E7%9A%84%E6%9E%81%E5%8C%96"><span class="toc-text">电介质的极化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B5%E4%BB%8B%E8%B4%A8%E7%9A%84%E7%94%B5%E5%AF%BC"><span class="toc-text">电介质的电导</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B5%E4%BB%8B%E8%B4%A8%E7%9A%84%E8%83%BD%E9%87%8F%E6%8D%9F%E8%80%97"><span class="toc-text">电介质的能量损耗</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%B2%E4%BD%93%E4%BB%8B%E8%B4%A8%E7%9A%84%E5%87%BB%E7%A9%BF"><span class="toc-text">液体介质的击穿</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BA%E4%BD%93%E4%BB%8B%E8%B4%A8%E7%9A%84%E5%87%BB%E7%A9%BF"><span class="toc-text">固体介质的击穿</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%B5%E6%B0%94%E8%AE%BE%E5%A4%87%E7%BB%9D%E7%BC%98%E8%AF%95%E9%AA%8C"><span class="toc-text">电气设备绝缘试验</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%9D%E7%BC%98%E7%9A%84%E8%80%81%E5%8C%96"><span class="toc-text">绝缘的老化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%83%AD%E8%80%81%E5%8C%96"><span class="toc-text">热老化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B5%E8%80%81%E5%8C%96"><span class="toc-text">电老化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%BA%E6%A2%B0%E8%80%81%E5%8C%96"><span class="toc-text">机械老化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%9D%E7%BC%98%E7%94%B5%E9%98%BB%E3%80%81%E5%90%B8%E6%94%B6%E6%AF%94%E5%92%8C%E6%B3%84%E6%BC%8F%E7%94%B5%E6%B5%81%E7%9A%84%E6%B5%8B%E9%87%8F"><span class="toc-text">绝缘电阻、吸收比和泄漏电流的测量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E6%94%BE%E7%94%B5%E6%A3%80%E6%B5%8B"><span class="toc-text">局部放电检测</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E8%BF%87%E7%94%B5%E5%8E%8B"><span class="toc-text">电力系统过电压</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E7%94%B5%E5%8E%8B%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-text">过电压的分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E6%8D%9F%E6%B3%A2%E8%BF%87%E7%A8%8B"><span class="toc-text">无损波过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E7%94%B5%E7%BA%BF%E4%B8%AD%E7%9A%84%E6%B3%A2"><span class="toc-text">输电线中的波</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E7%94%B5%E7%BA%BF%E7%9A%84%E6%8A%98%E5%B0%84%E4%B8%8E%E5%8F%8D%E5%B0%84"><span class="toc-text">输电线的折射与反射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%BC%E5%BE%97%E9%80%8A%E6%B3%95%E5%88%99"><span class="toc-text">彼得逊法则</span></a></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-color: transparent;"><div id="footer-wrap"><div id="ft"><div class="ft-item-1"><div class="t-top"><div class="t-t-l"><p class="ft-t t-l-t">格言🧬</p><div class="bg-ad"><div>愿你前行的道路有群星闪耀，愿你留下的足迹有百花绽放。你即是上帝的馈赠，世界因你而瑰丽。</div><div class="btn-xz-box"><a class="btn-xz" target="_blank" rel="noopener" href="https://sr.mihoyo.com/">点击开启星辰之旅</a></div></div></div><div class="t-t-r"><p class="ft-t t-l-t">猜你想看💡</p><ul class="ft-links"><li><a target="_blank" rel="noopener" href="https://www.fomal.cc/posts/eec9786.html">魔改指南</a><a href="/box/nav/">网址导航</a></li><li><a href="/social/link/">我的朋友</a><a href="/comments/">留点什么</a></li><li><a href="/personal/about/">关于作者</a><a href="/archives/">文章归档</a></li><li><a href="/categories/">文章分类</a><a href="/tags/">文章标签</a></li><li><a href="/box/Gallery/">我的画廊</a><a href="/personal/bb/">我的唠叨</a></li><li><a href="/site/time/">建设进程</a><a href="/site/census/">网站统计</a></li></ul></div></div></div><div class="ft-item-2"><p class="ft-t">推荐链接⌛</p><div class="ft-img-group"><div class="img-group-item"><a target="_blank" rel="noopener" href="https://www.fomal.cc/" title="Fomalhaut🥝"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/img/avatar.webp" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://blog.fanovian.cc/" title="Fanovian"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://note.fanovian.cc/assets/images/icon-boy-circle-transparent.png" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://qcwwn.cn/" title="Qcwwn"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic1.imgdb.cn/item/67c45df3d0e0a243d40a2b22.jpg" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div></div></div></div><div class="copyright"><span><b>&copy;2025</b></span><span><b>&nbsp;&nbsp;By 永恒闪电</b></span></div><div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v6.3.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Frame-Hexo-blue.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v4.3.1"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Theme-Butterfly-6513df.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用多线部署，主线路托管于Vercel"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Hosted-Vercel-brightgreen.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://user.51.la/" style="margin-inline:5px" title="本站数据分析得益于51la技术支持"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Analytics-51la-3db1eb.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://icp.gov.moe/?keyword=20226665" style="margin-inline:5px" title="本站已加入萌ICP豪华套餐，萌ICP备20226665号"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/萌ICP备-20226665-fe1384.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://bitiful.dogecast.com/buckets" style="margin-inline:5px" title="本网站经Service Worker分流至缤纷云对象存储"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src=" https://sourcebucket.s3.ladydaily.com/badge/Bucket-缤纷云-9c62da.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://www.netdun.net/" style="margin-inline:5px" title="本站使用网盾星球提供CDN加速与防护"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/CDN-网盾星球-fff2cc.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本网站源码由Github提供存储仓库"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src=" https://sourcebucket.s3.ladydaily.com/badge/Source-Github-d021d6.svg" alt=""/></a></p></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button><button class="share" type="button" title="右键模式" onclick="changeMouseMode()"><i class="fas fa-mouse"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog right_side"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button class="share" type="button" title="分享链接" onclick="share()"><i class="fas fa-share-nodes"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i><span id="percent">0<span>%</span></span></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-arrow-down"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div class="js-pjax" id="rightMenu"><div class="rightMenu-group rightMenu-small"><a class="rightMenu-item" href="javascript:window.history.back();"><i class="fa fa-arrow-left"></i></a><a class="rightMenu-item" href="javascript:window.history.forward();"><i class="fa fa-arrow-right"></i></a><a class="rightMenu-item" href="javascript:window.location.reload();"><i class="fa fa-refresh"></i></a><a class="rightMenu-item" href="javascript:rmf.scrollToTop();"><i class="fa fa-arrow-up"></i></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-text"><a class="rightMenu-item" href="javascript:rmf.copySelect();"><i class="fa fa-copy"></i><span>复制</span></a><a class="rightMenu-item" href="javascript:window.open(&quot;https://www.baidu.com/s?wd=&quot;+window.getSelection().toString());window.location.reload();"><i class="fa fa-search"></i><span>百度搜索</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-too"><a class="rightMenu-item" href="javascript:window.open(window.getSelection().toString());window.location.reload();"><i class="fa fa-link"></i><span>转到链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-paste"><a class="rightMenu-item" href="javascript:rmf.paste()"><i class="fa fa-copy"></i><span>粘贴</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-post"><a class="rightMenu-item" href="#post-comment"><i class="fas fa-comment"></i><span>空降评论</span></a><a class="rightMenu-item" href="javascript:rmf.copyWordsLink()"><i class="fa fa-link"></i><span>复制本文地址</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-to"><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>新窗口打开</span></a><a class="rightMenu-item" id="menu-too" href="javascript:rmf.open()"><i class="fa fa-link"></i><span>转到链接</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-img"><a class="rightMenu-item" href="javascript:rmf.saveAs()"><i class="fa fa-download"></i><span>保存图片</span></a><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>在新窗口打开</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制图片链接</span></a></div><div class="rightMenu-group rightMenu-line"><a class="rightMenu-item" href="javascript:randomPost()"><i class="fa fa-paper-plane"></i><span>随便逛逛</span></a><a class="rightMenu-item" href="javascript:switchNightMode();"><i class="fa fa-moon"></i><span>昼夜切换</span></a><a class="rightMenu-item" href="javascript:rmf.switchReadMode();"><i class="fa fa-book"></i><span>阅读模式</span></a><a class="rightMenu-item" href="/personal/about/"><i class="fa fa-info-circle"></i><span>关于博客</span></a><a class="rightMenu-item" href="javascript:toggleWinbox();"><i class="fas fa-cog"></i><span>美化设置</span></a><a class="rightMenu-item" href="javascript:rmf.fullScreen();"><i class="fas fa-expand"></i><span>切换全屏</span></a><a class="rightMenu-item" href="javascript:window.print();"><i class="fa-solid fa-print"></i><span>打印页面</span></a></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.umd.min.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/instant.page/5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script><script src="/js/search/local-search.js"></script><script async="async">var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())
+setTimeout(function(){preloader.endLoading();}, 5000);
+document.getElementById('loading-box').addEventListener('click',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: '',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: '',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.staticfile.org/twikoo/1.6.8/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script><script async src="https://cdn1.tianli0.top/npm/vue@2.6.14/dist/vue.min.js"></script><script async src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script><script async src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script><script defer type="text/javascript" src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script><script async src="//npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><script defer src="https://cdn1.tianli0.top/gh/nextapps-de/winbox/dist/winbox.bundle.min.js"></script><script async src="//at.alicdn.com/t/c/font_3586335_hsivh70x0fm.js"></script><script async src="//at.alicdn.com/t/c/font_3636804_gr02jmjr3y9.js"></script><script async src="//at.alicdn.com/t/c/font_3612150_kfv55xn3u2g.js"></script><script async src="https://cdn.wpon.cn/2022-sucai/Gold-ingot.js"></script><canvas id="universe"></canvas><canvas id="snow"></canvas><script defer src="/js/fomal.js"></script><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn1.tianli0.top/npm/js-heo@1.0.12/metingjs/Meting.min.js"></script><script src="https://lib.baomitu.com/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show","#web_bg",".js-pjax","#bibi","body > title","#app","#tag-echarts","#posts-echart","#categories-echarts"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://EternalLightning.github.io/categories/学习生活/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">⚡ 电气工程课程与研究 (8)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item" style="visibility: hidden"></div><div class="magnet_item" style="visibility: hidden"></div><a class="magnet_link_more"  href="https://EternalLightning.github.io/categories/" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
+    console.log('已挂载magnet')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(33.333333333333336% - 5px);background: #e9e9e9;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: var(--text-bg-hover)}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
+    <style></style><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/83a4a9c5.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/HVT.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-08-21</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/83a4a9c5.html&quot;);" href="javascript:void(0);" alt="">高电压技术</a><div class="blog-slider__text">高电压技术复习总结</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/83a4a9c5.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/28ffb084.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/PE.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-07-28</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/28ffb084.html&quot;);" href="javascript:void(0);" alt="">电力电子技术</a><div class="blog-slider__text">电力电子技术复习总结</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/28ffb084.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/505037a0.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/TAPS.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-07-21</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/505037a0.html&quot;);" href="javascript:void(0);" alt="">电力系统暂态分析</a><div class="blog-slider__text">电力系统暂态分析复习总结</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/505037a0.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/5a8a6c8d.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/FEE.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-07-14</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/5a8a6c8d.html&quot;);" href="javascript:void(0);" alt="">电气工程基础</a><div class="blog-slider__text">电气工程基础复习总结</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/5a8a6c8d.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/4cc868c2.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/EM.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-06-24</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/4cc868c2.html&quot;);" href="javascript:void(0);" alt="">电机学</a><div class="blog-slider__text">电机学复习总结</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/4cc868c2.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/159a5633.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover/AET.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-06-12</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/159a5633.html&quot;);" href="javascript:void(0);" alt="">模拟电子技术</a><div class="blog-slider__text">模拟电子技术复习总结</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/159a5633.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/ce296272.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-05-28</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/ce296272.html&quot;);" href="javascript:void(0);" alt="">电力系统继电保护中名词解释与重点</a><div class="blog-slider__text">电力系统继电保护中的部分名词解释与部分重要内容的汇总</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/ce296272.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/d56cc19f.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/cover.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-02-10</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/d56cc19f.html&quot;);" href="javascript:void(0);" alt="">潮流计算优化程序</a><div class="blog-slider__text">本人参加育才计划时，编写的潮流计算程序</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/d56cc19f.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><script data-pjax src="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+  function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('gitZone');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 320px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+      }
+
+    if( document.getElementById('gitZone') && (location.pathname ==='/site/census/'|| '/site/census/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("/api?null",['#d9e0df', '#c6e0dc', '#a8dcd4', '#9adcd2', '#89ded1', '#77e0d0', '#5fdecb', '#47dcc6', '#39dcc3', '#1fdabe', '#00dab9'],'null')
+    }
+  </script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script></div><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><!-- hexo injector body_end end --></body></html>
