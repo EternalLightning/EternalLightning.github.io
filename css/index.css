@@ -9762,6 +9762,9 @@ hr:before {
     transition: all 0.3s ease-in-out;
 }
 
+mjx-container[jax="CHTML"][display="true"]{
+    padding-top: 2px;
+}
 .search-dialog {
   position: fixed;
   top: 10%;
